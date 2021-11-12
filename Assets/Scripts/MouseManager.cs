@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MouseCursorManager : MonoBehaviour
+public class MouseManager : MonoBehaviour
 {
     [Header("Cursors")]
     [SerializeField] private Texture2D _normalState;
