@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof (Collider2D))]
-public class Grabbable : MonoBehaviour
+public class Draggable : MonoBehaviour
 {
     [SerializeField] private MouseCursorStateSO _mouseCursorState;
     [SerializeField] private ClickEventChannelSO _clickEventChannel;
