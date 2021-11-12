@@ -3,7 +3,9 @@ guid: 3165c45c12c174c34a8536aa88a69663
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - _mouseCursorState: {fileID: 11400000, guid: 60fbbea9032564ff39dc285cebe57a5d, type: 2}
+  - _clickEventChannel: {fileID: 11400000, guid: 7aa913e88515948a5a6ac03fe49b15a0, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
