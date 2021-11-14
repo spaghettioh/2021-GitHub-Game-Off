@@ -37,7 +37,7 @@ public class AudioManager : MonoBehaviour
         AudioManager[] audioManagers = FindObjectsOfType<AudioManager>();
         if (audioManagers.Length > 1)
         {
-            Destroy(this);
+            Destroy(this.gameObject);
         }
         else
         {
