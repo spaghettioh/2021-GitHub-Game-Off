@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c578c4af920354a95a0199cd416421c0, type: 3}
   m_Name: SFX_Farts
   m_EditorClassIdentifier: 
-  AudioClips:
+  CueType: 0
+  Clips:
   - {fileID: 8300000, guid: f8cf73636ad06482fb83bf86b9ed3e43, type: 3}
   - {fileID: 8300000, guid: 3c7799f5899b14097ae0e75fa9eb00ac, type: 3}
   - {fileID: 8300000, guid: 005faec86dd5b4c2fbe058cb9e08f567, type: 3}
