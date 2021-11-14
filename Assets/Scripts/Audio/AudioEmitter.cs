@@ -39,8 +39,6 @@ public class AudioEmitter : MonoBehaviour
         AudioClip clip = GetRandomClip(audioCue.Clips);
         _audioSource.loop = true;
 
-        Debug.Log($"Currently {_currentClip}, newly {clip}");
-        Debug.Log(_currentClip != clip);
         // Don't restart music if the current track is already playing
         if (_currentClip != clip)
         {

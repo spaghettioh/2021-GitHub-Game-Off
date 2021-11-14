@@ -8,7 +8,7 @@ public class Jukebox : MonoBehaviour
     [SerializeField] private AudioEventChannelSO _audioEventChannel;
 
     /// <summary>
-    /// The Jukebox uses Start() to ensure all the audio things have been set up
+    /// The Jukebox uses Start() to ensure the audio system set up is done
     /// before it tries to play music
     /// </summary>
     private void Start()
