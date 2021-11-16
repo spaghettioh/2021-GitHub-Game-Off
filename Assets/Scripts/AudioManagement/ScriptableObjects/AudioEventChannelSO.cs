@@ -11,8 +11,16 @@ public class AudioEventChannelSO : ScriptableObject
     /// Raises a playback event
     /// </summary>
     /// <param name="audioCue"></param>
-    public void RequestPlayback(AudioCueSO audioCue)
+    public void RaisePlaybackEvent(AudioCueSO audioCue)
     {
-        OnPlaybackRequested.Invoke(audioCue);
+        if (OnPlaybackRequested != null)
+        {
+            OnPlaybackRequested.Invoke(audioCue);
+        }
+        else
+        {
+            Debug.LogWarning("Audio playback event raised but nothing " +
+                "listens...");
+        }
     }
 }
