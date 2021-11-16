@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 [CreateAssetMenu(menuName = "Scriptable Objects/Scene Event Channel",
     fileName = "SceneEventChannel")]
