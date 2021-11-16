@@ -6,7 +6,7 @@ using UnityEngine;
 public class Clickable : MonoBehaviour
 {
     [SerializeField] private MouseCursorStateSO _mouseCursorState;
-    [SerializeField] private ClickEventChannelSO _clickEventChannel;
+    [SerializeField] private MouseEventChannelSO _clickEventChannel;
 
     private Vector3 _screenPoint;
     private Vector3 _offset;
@@ -26,7 +26,7 @@ public class Clickable : MonoBehaviour
             new Vector3(Input.mousePosition.x, Input.mousePosition.y,
                 _screenPoint.z)
             );
-        _clickEventChannel.Clicked(_offset);
+        _clickEventChannel.RaiseClick(_offset);
         _mouseCursorState.CursorState = CursorStyle.Press;
         _mouseDown = true;
     }

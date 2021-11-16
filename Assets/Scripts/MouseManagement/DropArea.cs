@@ -5,10 +5,11 @@ using UnityEngine.Events;
 
 public class DropArea : MonoBehaviour
 {
-    [SerializeField] private MouseCursorStateSO _mouseCursorState;
+    [SerializeField] private MouseEventChannelSO _mouseEventChannel;
+    [SerializeField] private FinishEventChannelSO _finishEventChannel;
 
-    [Header("When a GameObject is dropped...")]
-    public UnityAction _onDrop;
+    //[Header("When a GameObject is dropped...")]
+    //public UnityAction<Draggable> OnDrop;
 
     private Draggable _overhead;
 
@@ -19,6 +20,11 @@ public class DropArea : MonoBehaviour
             if (!_overhead.IsDragging)
             {
                 _overhead.transform.position = transform.position;
+
+                _mouseEventChannel.RaiseDrop(_overhead);
+                _finishEventChannel.Raise(_overhead.gameObject);
+                Debug.Log(_overhead.gameObject);
+                _overhead = null;
             }
         }
     }
@@ -28,8 +34,6 @@ public class DropArea : MonoBehaviour
         Draggable draggable = collision.GetComponent<Draggable>();
         if (draggable != null)
         {
-            Debug.Log($"{name}: {collision.gameObject.name} overhead");
-
             _overhead = draggable;
         }
     }

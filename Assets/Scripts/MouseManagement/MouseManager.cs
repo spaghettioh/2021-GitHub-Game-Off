@@ -14,7 +14,7 @@ public class MouseManager : MonoBehaviour
 
     [Header("Scriptable objects")]
     [SerializeField] private MouseCursorStateSO _mouseCursorState;
-    [SerializeField] private ClickEventChannelSO _clickEventChannel;
+    [SerializeField] private MouseEventChannelSO _mouseEventChannel;
 
     private CursorStyle currentCursorStyle;
 
@@ -23,7 +23,7 @@ public class MouseManager : MonoBehaviour
 
     private void OnEnable()
     {
-        _clickEventChannel.OnClick += MouseClicked;
+        _mouseEventChannel.OnClick += MouseClicked;
     }
 
     private void Start()

@@ -6,7 +6,7 @@ using UnityEngine;
 public class DraggableHinge : MonoBehaviour
 {
     [SerializeField] private MouseCursorStateSO _mouseCursorState;
-    [SerializeField] private ClickEventChannelSO _clickEventChannel;
+    [SerializeField] private MouseEventChannelSO _clickEventChannel;
 
     private Vector3 _screenPoint;
     private Vector3 _offset;

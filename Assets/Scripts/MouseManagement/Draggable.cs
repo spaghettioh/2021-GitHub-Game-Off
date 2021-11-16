@@ -6,7 +6,7 @@ using UnityEngine;
 public class Draggable : MonoBehaviour
 {
     [SerializeField] private MouseCursorStateSO _mouseCursorState;
-    [SerializeField] private ClickEventChannelSO _clickEventChannel;
+    [SerializeField] private MouseEventChannelSO _mouseEventChannel;
 
     //private Vector3 _offset;
     private bool _isDragging;
