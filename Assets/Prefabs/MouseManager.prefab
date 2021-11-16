@@ -43,10 +43,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a80e611e3df4f4bc0a00c86e4565b1f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _normalState: {fileID: 2800000, guid: 00ca53339bd534293827e416e5b71f58, type: 3}
+  _normalState: {fileID: 2800000, guid: d1334cbf4dcd84dd58ecce7ce0f34085, type: 3}
   _openState: {fileID: 2800000, guid: 414a538938dc64aaa897e134414e2bb4, type: 3}
   _grabState: {fileID: 2800000, guid: 6b533a86ebbd14c75868805c7f7ce16e, type: 3}
-  _readyState: {fileID: 2800000, guid: b6fc2694f0fac484ab12778ed32a9985, type: 3}
-  _pressState: {fileID: 2800000, guid: bb38d7bdb900049d4a508c4d370f46bb, type: 3}
+  _readyState: {fileID: 2800000, guid: 9228a469fd5744056a2320606f426193, type: 3}
+  _pressState: {fileID: 2800000, guid: 9228a469fd5744056a2320606f426193, type: 3}
   _mouseCursorState: {fileID: 11400000, guid: 60fbbea9032564ff39dc285cebe57a5d, type: 2}
-  _clickEventChannel: {fileID: 11400000, guid: 7aa913e88515948a5a6ac03fe49b15a0, type: 2}
+  _mouseEventChannel: {fileID: 11400000, guid: 7aa913e88515948a5a6ac03fe49b15a0, type: 2}
