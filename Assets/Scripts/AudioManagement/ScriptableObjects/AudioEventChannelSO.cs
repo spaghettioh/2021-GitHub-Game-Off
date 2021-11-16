@@ -11,7 +11,7 @@ public class AudioEventChannelSO : ScriptableObject
     /// Raises a playback event
     /// </summary>
     /// <param name="audioCue"></param>
-    public void RaisePlaybackEvent(AudioCueSO audioCue)
+    public void Raise(AudioCueSO audioCue)
     {
         if (OnPlaybackRequested != null)
         {

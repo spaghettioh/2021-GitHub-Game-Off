@@ -18,6 +18,6 @@ public class Jukebox : MonoBehaviour
 
     private void TriggerMusic()
     {
-        _audioEventChannel.RaisePlaybackEvent(_music);
+        _audioEventChannel.Raise(_music);
     }
 }

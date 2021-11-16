@@ -521,7 +521,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 11400000, guid: 1e16f6afb83564cc5b009aa8788b9c39, type: 2}
         m_TargetAssemblyTypeName: AudioEventChannelSO, Assembly-CSharp
-        m_MethodName: RequestPlayback
+        m_MethodName: Raise
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: 760e3d96a71f54c41aa6651f36b28b67, type: 2}
