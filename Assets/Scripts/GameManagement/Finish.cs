@@ -23,15 +23,21 @@ public class Finish : MonoBehaviour
 
     private void Finished(GameObject source)
     {
-        StartCoroutine(NextGame());
-
         if (source.GetComponent<WinCondition>() != null)
         {
             OnWin.Invoke();
+            StartCoroutine(NextGame());
         }
         else if (source.GetComponent<LoseCondition>() != null)
         {
             OnLose.Invoke();
+            StartCoroutine(NextGame());
+        }
+        else
+        {
+            Debug.LogWarning($"The mini game is finished but the thing that" +
+                $"raised the event did not have a win or lose condition:" +
+                $"{source.name}");
         }
     }
 
