@@ -23,13 +23,22 @@ public class Finish : MonoBehaviour
 
     private void Finished(GameObject source)
     {
+        StartCoroutine(NextGame());
+
         if (source.GetComponent<WinCondition>() != null)
         {
             OnWin.Invoke();
         }
-        if (source.GetComponent<LoseCondition>() != null)
+        else if (source.GetComponent<LoseCondition>() != null)
         {
             OnLose.Invoke();
         }
+    }
+
+    private IEnumerator NextGame()
+    {
+        yield return new WaitForSeconds(2f);
+        // Load another mini game
+        Debug.Log($"{name} wants to load the next game.");
     }
 }
