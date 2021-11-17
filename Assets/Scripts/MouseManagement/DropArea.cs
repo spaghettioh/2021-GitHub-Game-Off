@@ -1,15 +1,9 @@
 ﻿using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.Events;
 
 public class DropArea : MonoBehaviour
 {
     [SerializeField] private MouseEventChannelSO _mouseEventChannel;
     [SerializeField] private FinishEventChannelSO _finishEventChannel;
-
-    //[Header("When a GameObject is dropped...")]
-    //public UnityAction<Draggable> OnDrop;
 
     private Draggable _overhead;
 
@@ -23,7 +17,6 @@ public class DropArea : MonoBehaviour
 
                 _mouseEventChannel.RaiseDrop(_overhead);
                 _finishEventChannel.Raise(_overhead.gameObject);
-                Debug.Log(_overhead.gameObject);
                 _overhead = null;
             }
         }

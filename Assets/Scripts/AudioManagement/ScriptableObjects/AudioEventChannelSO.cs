@@ -6,11 +6,6 @@ using UnityEngine.Events;
 public class AudioEventChannelSO : ScriptableObject
 {
     public UnityAction<AudioCueSO> OnPlaybackRequested;
-
-    /// <summary>
-    /// Raises a playback event
-    /// </summary>
-    /// <param name="audioCue"></param>
     public void Raise(AudioCueSO audioCue)
     {
         if (OnPlaybackRequested != null)

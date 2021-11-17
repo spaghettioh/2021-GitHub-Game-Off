@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnityEngine.Events;
 
 [CreateAssetMenu (menuName = "Scriptable Objects/Click Event Channel",

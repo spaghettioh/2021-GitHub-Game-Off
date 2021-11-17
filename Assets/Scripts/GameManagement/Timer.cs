@@ -1,16 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
-using System;
 
 public class Timer : MonoBehaviour
 {
     [SerializeField] private float _startingTime = 5f;
-    [Space, SerializeField] private TMP_Text _timeRemainingText;
+    [Space]
+    [SerializeField] private TMP_Text _timeRemainingText;
     [SerializeField] private Image _timerProgress;
-    [Space, SerializeField] private FinishEventChannelSO _finishEventChannel;
+    [Space]
+    [SerializeField] private FinishEventChannelSO _finishEventChannel;
 
     private float _timerProgressActual;
     private float _timeRemaining;

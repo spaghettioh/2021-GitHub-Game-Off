@@ -1,6 +1,5 @@
-﻿using UnityEngine;
-using System.Collections;
-using System;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.Events;
 
 public class Finish : MonoBehaviour
@@ -41,10 +40,13 @@ public class Finish : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Waits a few seconds a to load another mini game
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator NextGame()
     {
         yield return new WaitForSeconds(2f);
-        // Load another mini game
         Debug.Log($"{name} wants to load the next game.");
     }
 }
