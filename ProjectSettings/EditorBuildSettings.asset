@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/BeardUpGirlfriend.unity
     guid: 4fd73294a2d2f40b9ba1e69eae6c70b9
   - enabled: 1
+    path: Assets/Scenes/PersistentManagers.unity
+    guid: 759409660aaee420fb4dbe9653d62c8c
+  - enabled: 1
     path: Assets/Scenes/BuffUnderwearGargoyle.unity
     guid: e708b0b45c1c8485293a924154e55158
   m_configObjects: {}
