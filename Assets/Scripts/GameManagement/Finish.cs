@@ -10,6 +10,13 @@ public class Finish : MonoBehaviour
     public UnityEvent OnWin;
     public UnityEvent OnLose;
 
+    private static bool _miniGameIsFinished = false;
+    // Used by other scripts to know if they should keep working
+    public static bool MiniGameIsFinished {
+        get { return _miniGameIsFinished; }
+        private set { _miniGameIsFinished = value; }
+    }
+
     private void OnEnable()
     {
         _finishEventChannel.OnFinished += Finished;
@@ -22,6 +29,8 @@ public class Finish : MonoBehaviour
 
     private void Finished(GameObject source)
     {
+        _miniGameIsFinished = true;
+
         if (source.GetComponent<WinCondition>() != null)
         {
             OnWin.Invoke();

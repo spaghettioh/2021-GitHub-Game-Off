@@ -13,26 +13,6 @@ public class Timer : MonoBehaviour
 
     private float _timerProgressActual;
     private float _timeRemaining;
-    private bool _gameIsActive = true;
-
-    private void OnEnable()
-    {
-        _finishEventChannel.OnFinished += StopTimer;
-    }
-
-    private void OnDisable()
-    {
-        _finishEventChannel.OnFinished -= StopTimer;
-    }
-
-    /// <summary>
-    /// Ensures that if a finish condition is met, the timer stops
-    /// </summary>
-    /// <param name="notUsed"></param>
-    private void StopTimer(GameObject notUsed)
-    {
-        _gameIsActive = false;
-    }
 
     private void Start()
     {
@@ -44,7 +24,7 @@ public class Timer : MonoBehaviour
 
     private void Update()
     {
-        if (_gameIsActive)
+        if (!Finish.MiniGameIsFinished)
         {
             if (_timeRemaining > 0)
             {
@@ -64,7 +44,6 @@ public class Timer : MonoBehaviour
                 _finishEventChannel.OnFinished(gameObject);
                 _timeRemaining = 0;
                 _timerProgressActual = 0;
-                _gameIsActive = false;
             }
 
             // Change the progress of the timer radial
