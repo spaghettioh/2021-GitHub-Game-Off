@@ -13,6 +13,20 @@ public class MouseManager : MonoBehaviour
     [SerializeField] private MouseCursorStateSO _mouseCursorState;
     [SerializeField] private MouseEventChannelSO _mouseEventChannel;
 
+    private static bool _mouseIsFree = true;
+    // Used by other scripts to know if the mouse is available
+    public static bool MouseIsFree
+    {
+        get
+        {
+            return _mouseIsFree;
+        }
+        private set
+        {
+            _mouseIsFree = value;
+        }
+    }
+
     private CursorStyle currentCursorStyle;
 
     private CursorMode _cursorMode = CursorMode.Auto;
@@ -30,10 +44,12 @@ public class MouseManager : MonoBehaviour
 
     private void Update()
     {
+        MouseIsFree = false;
         if (currentCursorStyle != _mouseCursorState.CursorState)
         {
             if (_mouseCursorState.CursorState == CursorStyle.Normal)
             {
+                MouseIsFree = true;
                 Cursor.SetCursor(_normalState, _hotSpot, _cursorMode);
             }
             else if (_mouseCursorState.CursorState == CursorStyle.Open)
