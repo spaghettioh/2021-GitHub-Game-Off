@@ -14,7 +14,6 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
-        SetUpSingleton();
         _audioEmitterPool.PreWarm(_poolSize, transform);
     }
 
@@ -26,23 +25,6 @@ public class AudioManager : MonoBehaviour
     private void OnDisable()
     {
         _audioEventChannel.OnPlaybackRequested -= ActivateEmitter;
-    }
-
-    /// <summary>
-    /// Allow the audio manager to persist between scenes, but don't create more
-    /// than one instance
-    /// </summary>
-    private void SetUpSingleton()
-    {
-        AudioManager[] audioManagers = FindObjectsOfType<AudioManager>();
-        if (audioManagers.Length > 1)
-        {
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            DontDestroyOnLoad(this);
-        }
     }
 
     /// <summary>
