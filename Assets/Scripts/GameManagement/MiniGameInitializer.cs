@@ -8,7 +8,7 @@ public class MiniGameInitializer : MonoBehaviour
     [Header("PersistentManagers")]
     [SerializeField] private string _sceneName = "PersistentManagers";
 
-    private void OnEnable()
+    private void Awake()
     {
         SceneManager.LoadSceneAsync(_sceneName, LoadSceneMode.Additive);
     }
