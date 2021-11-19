@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
-public class UFOlogistArms : MonoBehaviour
+public class UFOlogistArmController : MonoBehaviour
 {
     [SerializeField] private int _rotationSpeed;
     [Space]
@@ -11,7 +12,7 @@ public class UFOlogistArms : MonoBehaviour
     private float _rotationZ;
     private bool _isDragging;
 
-    private void Start()
+    private void Awake()
     {
         _rigidBody = GetComponent<Rigidbody2D>();
     }
@@ -25,6 +26,7 @@ public class UFOlogistArms : MonoBehaviour
         Vector3 armDelta = mousePosition - transform.position;
 
         _rotationZ = Mathf.Atan2(armDelta.x, -armDelta.y) * Mathf.Rad2Deg;
+
     }
 
     private void OnMouseDrag()
@@ -49,10 +51,10 @@ public class UFOlogistArms : MonoBehaviour
         _isDragging = true;
         _mouseCursorState.CursorState = CursorStyle.Grab;
 
-        // Snap the object to the mouse cursor
-        transform.position = Camera.main.ScreenToWorldPoint(
-            new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
-        transform.localScale = new Vector3(1.25f, 1.25f, 1f);
+        //// Snap the object to the mouse cursor
+        //transform.position = Camera.main.ScreenToWorldPoint(
+        //    new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
+        //transform.localScale = new Vector3(1.25f, 1.25f, 1f);
     }
 
     private void OnMouseUp()

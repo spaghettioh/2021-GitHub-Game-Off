@@ -44,7 +44,6 @@ public class MouseManager : MonoBehaviour
 
     private void Update()
     {
-        MouseIsFree = false;
         if (currentCursorStyle != _mouseCursorState.CursorState)
         {
             if (_mouseCursorState.CursorState == CursorStyle.Normal)
@@ -54,18 +53,22 @@ public class MouseManager : MonoBehaviour
             }
             else if (_mouseCursorState.CursorState == CursorStyle.Open)
             {
+                MouseIsFree = false;
                 Cursor.SetCursor(_openState, _hotSpot, _cursorMode);
             }
             else if (_mouseCursorState.CursorState == CursorStyle.Grab)
             {
+                MouseIsFree = false;
                 Cursor.SetCursor(_grabState, _hotSpot, _cursorMode);
             }
             else if (_mouseCursorState.CursorState == CursorStyle.Ready)
             {
+                MouseIsFree = false;
                 Cursor.SetCursor(_readyState, _hotSpot, _cursorMode);
             }
             else if (_mouseCursorState.CursorState == CursorStyle.Press)
             {
+                MouseIsFree = false;
                 Cursor.SetCursor(_pressState, _hotSpot, _cursorMode);
             }
 
