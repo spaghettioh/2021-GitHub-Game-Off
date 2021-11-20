@@ -39,6 +39,11 @@ public class MiniGameFinish : MonoBehaviour
         _finishEventChannel.OnFinished += Finished;
     }
 
+    private void Awake()
+    {
+        MiniGameIsFinished = false;
+    }
+
     private void OnDisable()
     {
         _finishEventChannel.OnFinished -= Finished;

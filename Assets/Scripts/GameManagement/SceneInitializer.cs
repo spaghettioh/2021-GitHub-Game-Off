@@ -7,20 +7,24 @@ public class SceneInitializer : MonoBehaviour
     [Header("PersistentManagers")]
     [SerializeField] private string _sceneName = "PersistentManagers";
 
+    private string _thisScene;
+
     private void Awake()
     {
         if (!SceneManager.GetSceneByName(_sceneName).isLoaded)
         {
-            Debug.Log("Loading persistent managers");
+            _thisScene = SceneManager.GetActiveScene().name;
             // Load the managers scene and scubscribe to its complete event
+            // so that the EventSystem works properly
             SceneManager.LoadSceneAsync(_sceneName, LoadSceneMode.Additive)
                 .completed += PersistentManagersLoaded;
+            SceneManager.UnloadSceneAsync(_thisScene);
         }
     }
 
     private void PersistentManagersLoaded(AsyncOperation unused)
     {
-        //_loadEventChannel.Raise(_thisScene.name);
+        _loadEventChannel.Raise(_thisScene);
         // If you need to know when managers are done loaded, raise event here
     }
 }

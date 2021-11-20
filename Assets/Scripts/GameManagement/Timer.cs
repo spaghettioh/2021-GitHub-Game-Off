@@ -33,6 +33,7 @@ public class Timer : MonoBehaviour
 
                 _timerProgressActual -= Time.deltaTime;
 
+                // Need to check because setting the radial less than 0 breaks
                 if (_timerProgressActual <= 0f)
                 {
                     _timerProgressActual = 1f;
