@@ -7,7 +7,7 @@ using TMPro;
 
 public class SceneList : MonoBehaviour
 {
-    [SerializeField] private SceneEventChannelSO _sceneEventChannel;
+    [SerializeField] private LoadEventChannelSO _sceneEventChannel;
 
     private TMP_Dropdown _scenesDropdown;
 
