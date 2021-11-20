@@ -79,8 +79,6 @@ public class UFOlogistSpeechBubble : MonoBehaviour
                 leftHandDelta
             ) / _winningRotationAmount;
 
-        Debug.Log(_totalRotation);
-
         if (!MiniGameFinish.MiniGameIsFinished && _progress < 1f)
         {
             _progress = _totalRotation;
