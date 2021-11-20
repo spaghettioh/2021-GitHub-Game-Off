@@ -3,13 +3,13 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
-[CreateAssetMenu(menuName = "Scriptable Objects/Scene Event Channel",
-    fileName = "SceneEventChannel")]
-public class SceneEventChannelSO : ScriptableObject
+[CreateAssetMenu(menuName = "Scriptable Objects/Load Event Channel",
+    fileName = "LoadEventChannel")]
+public class LoadEventChannelSO : ScriptableObject
 {
     public UnityAction<string> OnSceneLoadRequested;
 
-    public void LoadScene(string sceneName)
+    public void Raise(string sceneName)
     {
         OnSceneLoadRequested.Invoke(sceneName);
     }
