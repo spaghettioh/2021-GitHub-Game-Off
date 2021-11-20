@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MiniGameInitializer : MonoBehaviour
+public class SceneInitializer : MonoBehaviour
 {
     [Header("PersistentManagers")]
     [SerializeField] private string _sceneName = "PersistentManagers";

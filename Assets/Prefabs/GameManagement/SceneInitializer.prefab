@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1029920941614434278}
   - component: {fileID: 4148076752787538634}
   m_Layer: 0
-  m_Name: MiniGameInitializer
+  m_Name: SceneInitializer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
