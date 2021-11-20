@@ -1,21 +1,38 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class MiniGameFinish : MonoBehaviour
 {
-    [SerializeField] private FinishEventChannelSO _finishEventChannel;
-
     [Header("When finished...")]
+    [SerializeField] private string _nextScene;
     public UnityEvent OnWin;
     public UnityEvent OnLose;
+    [Space]
 
+    [Header("// Prefab stuff")]
     private static bool _miniGameIsFinished = false;
     // Used by other scripts to know if they should keep working
     public static bool MiniGameIsFinished {
         get { return _miniGameIsFinished; }
         private set { _miniGameIsFinished = value; }
     }
+
+    [Header("OnWin...")]
+    [SerializeField] private SpriteRenderer _winBackground;
+    [SerializeField] private AudioCueSO _winSound;
+
+    [Header("OnLose...")]
+    [SerializeField] private SpriteRenderer _loseBackground;
+    [SerializeField] private AudioCueSO _loseSound;
+
+    [Header("Listening to...")]
+    [SerializeField] private FinishEventChannelSO _finishEventChannel;
+
+    [Header("Broadcasting to...")]
+    [SerializeField] private LoadEventChannelSO _loadEventchannel;
+    [SerializeField] private AudioEventChannelSO _audioEventChannel;
 
     private void OnEnable()
     {
@@ -29,33 +46,47 @@ public class MiniGameFinish : MonoBehaviour
 
     private void Finished(GameObject source)
     {
-        _miniGameIsFinished = true;
+        MiniGameIsFinished = true;
+        StartCoroutine(NextScene());
 
         if (source.GetComponent<WinCondition>() != null)
         {
-            OnWin.Invoke();
-            StartCoroutine(NextGame());
+            Win();
         }
         else if (source.GetComponent<LoseCondition>() != null)
         {
-            OnLose.Invoke();
-            StartCoroutine(NextGame());
+            Lose();
         }
         else
         {
             Debug.LogWarning($"The mini game is finished but the thing that" +
-                $"raised the event did not have a win or lose condition:" +
+                $"raised the event did not have a Win/LoseCondition():\n" +
                 $"{source.name}");
         }
+    }
+
+    private void Win()
+    {
+        _winBackground.gameObject.SetActive(true);
+        _audioEventChannel.Raise(_winSound);
+        OnWin.Invoke();
+    }
+
+    private void Lose()
+    {
+        _loseBackground.gameObject.SetActive(true);
+        _audioEventChannel.Raise(_loseSound);
+        OnLose.Invoke();
+
     }
 
     /// <summary>
     /// Waits a few seconds a to load another mini game
     /// </summary>
     /// <returns></returns>
-    private IEnumerator NextGame()
+    private IEnumerator NextScene()
     {
         yield return new WaitForSeconds(2f);
-        Debug.Log($"{name} wants to load the next game.");
+        SceneManager.LoadScene(_nextScene);
     }
 }
