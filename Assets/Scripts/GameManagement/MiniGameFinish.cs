@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.SceneManagement;
 
 public class MiniGameFinish : MonoBehaviour
 {
@@ -14,7 +13,8 @@ public class MiniGameFinish : MonoBehaviour
     [Header("// Prefab stuff")]
     private static bool _miniGameIsFinished = false;
     // Used by other scripts to know if they should keep working
-    public static bool MiniGameIsFinished {
+    public static bool MiniGameIsFinished
+    {
         get { return _miniGameIsFinished; }
         private set { _miniGameIsFinished = value; }
     }
@@ -65,6 +65,9 @@ public class MiniGameFinish : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Enable background & play sound, and invoke inspector events
+    /// </summary>
     private void Win()
     {
         _winBackground.gameObject.SetActive(true);
@@ -72,6 +75,9 @@ public class MiniGameFinish : MonoBehaviour
         OnWin.Invoke();
     }
 
+    /// <summary>
+    /// Enable background & play sound, and invoke inspector events
+    /// </summary>
     private void Lose()
     {
         _loseBackground.gameObject.SetActive(true);
@@ -87,6 +93,6 @@ public class MiniGameFinish : MonoBehaviour
     private IEnumerator NextScene()
     {
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene(_nextScene);
+        _loadEventchannel.Raise(_nextScene);
     }
 }

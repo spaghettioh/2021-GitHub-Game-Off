@@ -1,7 +1,5 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.SceneManagement;
 
 [CreateAssetMenu(menuName = "Scriptable Objects/Load Event Channel",
     fileName = "LoadEventChannel")]

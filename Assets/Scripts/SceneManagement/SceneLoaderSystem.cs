@@ -1,25 +1,47 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneLoaderSystem : MonoBehaviour
 {
-    [SerializeField] private LoadEventChannelSO _sceneEventChannel;
+    [SerializeField] private LoadEventChannelSO _loadEventChannel;
+
+    private Scene _currentActiveScene;
+
+    private void Awake()
+    {
+        _currentActiveScene = SceneManager.GetActiveScene();
+    }
 
     private void OnEnable()
     {
-        _sceneEventChannel.OnSceneLoadRequested += LoadAScene;
+        _loadEventChannel.OnSceneLoadRequested += RequestNewScene;
     }
 
     private void OnDisable()
     {
-        _sceneEventChannel.OnSceneLoadRequested -= LoadAScene;
+        _loadEventChannel.OnSceneLoadRequested -= RequestNewScene;
     }
 
-    public void LoadAScene(string scene)
+    private void RequestNewScene(string newScene)
     {
-        SceneManager.LoadScene(scene);
+        StartCoroutine(LoadScene(newScene));
+    }
+
+    private IEnumerator LoadScene(string newScene)
+    {
+        Scene activeScene = SceneManager.GetActiveScene();
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(
+            newScene, LoadSceneMode.Additive);
+        Debug.Log("AsyncLoad kicking off");
+
+        while (!asyncLoad.isDone)
+        {
+            Debug.Log("Loading...");
+            yield return null;
+        }
+
+        SceneManager.SetActiveScene(SceneManager.GetSceneByName(newScene));
+        SceneManager.UnloadSceneAsync(activeScene);
     }
 }
