@@ -24,7 +24,7 @@ public class Timer : MonoBehaviour
 
     private void Update()
     {
-        if (!Finish.MiniGameIsFinished)
+        if (!MiniGameFinish.MiniGameIsFinished)
         {
             if (_timeRemaining > 0)
             {

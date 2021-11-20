@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Finish : MonoBehaviour
+public class MiniGameFinish : MonoBehaviour
 {
     [SerializeField] private FinishEventChannelSO _finishEventChannel;
 
