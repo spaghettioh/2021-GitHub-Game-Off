@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 public class SceneLoaderSystem : MonoBehaviour
 {
     [SerializeField] private LoadEventChannelSO _loadEventChannel;
+    [SerializeField] private Animator _screenWipeAnimator;
+    [SerializeField] private float _screenWipeDuration;
 
     private Scene _currentActiveScene;
 
@@ -30,18 +32,20 @@ public class SceneLoaderSystem : MonoBehaviour
 
     private IEnumerator LoadScene(string newScene)
     {
-        Scene activeScene = SceneManager.GetActiveScene();
+        _screenWipeAnimator.SetTrigger("Start");
+        yield return new WaitForSeconds(_screenWipeDuration);
+        
+        SceneManager.UnloadSceneAsync(_currentActiveScene);
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(
             newScene, LoadSceneMode.Additive);
-        Debug.Log("AsyncLoad kicking off");
 
         while (!asyncLoad.isDone)
         {
-            Debug.Log("Loading...");
             yield return null;
         }
 
         SceneManager.SetActiveScene(SceneManager.GetSceneByName(newScene));
-        SceneManager.UnloadSceneAsync(activeScene);
+        _currentActiveScene = SceneManager.GetActiveScene();
+        _screenWipeAnimator.SetTrigger("End");
     }
 }

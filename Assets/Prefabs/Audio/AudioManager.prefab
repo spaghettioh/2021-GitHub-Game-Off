@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3265585340122554819}
   - component: {fileID: 3265585340122554818}
+  - component: {fileID: 3423045839081708528}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -46,3 +47,11 @@ MonoBehaviour:
   _poolSize: 10
   _audioEmitterPool: {fileID: 11400000, guid: edd4a4a063ce04e3bb32ea5119f7ad1b, type: 2}
   _audioEventChannel: {fileID: 11400000, guid: 1e16f6afb83564cc5b009aa8788b9c39, type: 2}
+--- !u!81 &3423045839081708528
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3265585340122554817}
+  m_Enabled: 1
