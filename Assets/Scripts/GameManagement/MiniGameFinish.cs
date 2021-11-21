@@ -75,8 +75,8 @@ public class MiniGameFinish : MonoBehaviour
     /// </summary>
     private void Win()
     {
-        _winBackground.gameObject.SetActive(true);
-        _audioEventChannel.Raise(_winSound);
+        _winBackground?.gameObject.SetActive(true);
+        if (_winSound != null) _audioEventChannel.Raise(_winSound);
         OnWin.Invoke();
     }
 
@@ -85,8 +85,8 @@ public class MiniGameFinish : MonoBehaviour
     /// </summary>
     private void Lose()
     {
-        _loseBackground.gameObject.SetActive(true);
-        _audioEventChannel.Raise(_loseSound);
+        _loseBackground?.gameObject.SetActive(true);
+        if (_loseSound != null) _audioEventChannel.Raise(_loseSound);
         OnLose.Invoke();
 
     }
@@ -98,6 +98,6 @@ public class MiniGameFinish : MonoBehaviour
     private IEnumerator NextScene()
     {
         yield return new WaitForSeconds(2f);
-        _loadEventchannel.Raise(_nextScene);
+        _loadEventchannel?.Raise(_nextScene);
     }
 }

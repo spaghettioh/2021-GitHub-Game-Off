@@ -21,7 +21,6 @@ public class Jukebox : MonoBehaviour
 
     private void TriggerMusic()
     {
-        Debug.Log($"Jukebox trigger music {_music.name}");
         _audioEventChannel.Raise(_music);
     }
 }

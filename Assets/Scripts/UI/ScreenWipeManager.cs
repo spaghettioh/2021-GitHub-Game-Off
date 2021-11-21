@@ -40,25 +40,21 @@ public class ScreenWipeManager : MonoBehaviour
 
     private IEnumerator WaxOn()
     {
-        Debug.Log("ScreenWipe WaxOn started");
         _screenWipeAnimator.SetTrigger("WaxOn");
 
         yield return new WaitForSeconds(_screenWipeAnimator
             .GetCurrentAnimatorStateInfo(0).length);
 
-        Debug.Log("ScreenWipe WaxOn finished");
         _waxOnFinished.Raise();
     }
 
     private IEnumerator WaxOff()
     {
-        Debug.Log("ScreenWipe WaxOff started");
         _screenWipeAnimator.SetTrigger("WaxOff");
 
         yield return new WaitForSeconds(_screenWipeAnimator
             .GetCurrentAnimatorStateInfo(0).length);
 
-        Debug.Log("ScreenWipe WaxOff finished");
         _waxOffFinished.Raise();
     }
 }

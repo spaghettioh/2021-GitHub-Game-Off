@@ -13,7 +13,6 @@ public class VoidEventChannelSO : ScriptableObject
     {
         if (OnEventRaised != null)
         {
-            Debug.Log($"{name} raised");
             OnEventRaised.Invoke();
         }
         else

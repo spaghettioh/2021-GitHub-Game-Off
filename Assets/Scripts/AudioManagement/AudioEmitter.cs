@@ -42,7 +42,6 @@ public class AudioEmitter : MonoBehaviour
         // Restart the music only if a different track is requested
         if (_currentClip != newClip)
         {
-            Debug.Log($"Music current: {_currentClip?.name} > {newClip?.name}");
             _audioSource.clip = newClip;
             _currentClip = newClip;
             _audioSource.Play();

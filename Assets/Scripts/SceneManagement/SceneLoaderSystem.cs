@@ -14,7 +14,6 @@ public class SceneLoaderSystem : MonoBehaviour
 
     private void OnEnable()
     {
-        Debug.Log("SceneLoader enabled");
         _loadEventChannel.OnSceneLoadRequested += RequestNewScene;
     }
 
@@ -25,7 +24,6 @@ public class SceneLoaderSystem : MonoBehaviour
 
     private void RequestNewScene(string newScene)
     {
-        Debug.Log("SceneLoader detected new scene request");
         _currentActiveScene = SceneManager.GetActiveScene().name;
         _nextScene = newScene;
         _startWaxOn.Raise();
@@ -35,7 +33,6 @@ public class SceneLoaderSystem : MonoBehaviour
 
     private void TriggerNewScene()
     {
-        Debug.Log("SceneLoader detected wax on finish");
         // Unsubscribe from the screen wipe finish
         _waxOnFinished.OnEventRaised -= TriggerNewScene;
         StartCoroutine(LoadScene());
@@ -43,8 +40,6 @@ public class SceneLoaderSystem : MonoBehaviour
 
     private IEnumerator LoadScene()
     {
-        Debug.Log("SceneLoader loading scene");
-
         SceneManager.UnloadSceneAsync(_currentActiveScene);
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(
             _nextScene, LoadSceneMode.Additive);
@@ -54,7 +49,6 @@ public class SceneLoaderSystem : MonoBehaviour
             yield return null;
         }
 
-        Debug.Log("SceneLoader new scene loaded");
         SceneManager.SetActiveScene(SceneManager.GetSceneByName(_nextScene));
         _currentActiveScene = _nextScene;
 

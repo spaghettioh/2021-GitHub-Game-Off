@@ -27,7 +27,6 @@ public class UFOlogistSpeechBubble : MonoBehaviour
 
     private void Start()
     {
-        _mask = GetComponent<Image>();
         _mask.fillAmount = _progress;
     }
 
