@@ -43,12 +43,13 @@ public class AudioManager : MonoBehaviour
 
             _musicEmitter.name = audioCue.name;
             _musicEmitter.PlayMusic(audioCue);
-            _musicEmitter.OnEmitterFinished += ReturnEmitterToPool;
+            //_musicEmitter.OnEmitterFinished += ReturnEmitterToPool;
         }
         else
         {
             // Enable an available emitter and send it the audio to play
             AudioEmitter emitter = _audioEmitterPool.RequestEmitter();
+            emitter.name = audioCue.name;
             emitter.gameObject.SetActive(true);
             emitter.PlaySoundEffect(audioCue);
             emitter.OnEmitterFinished += ReturnEmitterToPool;

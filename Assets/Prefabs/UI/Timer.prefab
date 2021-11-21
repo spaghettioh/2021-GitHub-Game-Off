@@ -58,6 +58,7 @@ MonoBehaviour:
   _timeRemainingText: {fileID: 2694619936183018427}
   _timerProgress: {fileID: 2694619935880872498}
   _finishEventChannel: {fileID: 11400000, guid: fc94c98fbf195465b9a82bdc8f08728f, type: 2}
+  _screenWiped: {fileID: 11400000, guid: ed35f729cce464480a10f8e1d6e5b8b9, type: 2}
 --- !u!114 &2694619935825721416
 MonoBehaviour:
   m_ObjectHideFlags: 0

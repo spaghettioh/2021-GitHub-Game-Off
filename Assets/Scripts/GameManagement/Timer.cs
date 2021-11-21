@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,9 +11,15 @@ public class Timer : MonoBehaviour
     [SerializeField] private Image _timerProgress;
     [Space]
     [SerializeField] private FinishEventChannelSO _finishEventChannel;
+    [SerializeField] private LoadEventChannelSO _screenWiped;
 
     private float _timerProgressActual;
     private float _timeRemaining;
+
+    private void OnEnable()
+    {
+        //_screenWiped.OnSceneLoadRequested += DisableTimer;
+    }
 
     private void Start()
     {
@@ -51,4 +58,10 @@ public class Timer : MonoBehaviour
             _timerProgress.fillAmount = _timerProgressActual;
         }
     }
+
+    private void DisableTimer(string unused)
+    {
+        gameObject.SetActive(false);
+    }
 }
+

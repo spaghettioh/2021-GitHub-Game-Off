@@ -3,28 +3,34 @@ using UnityEngine.SceneManagement;
 
 public class SceneInitializer : MonoBehaviour
 {
-    [SerializeField] private LoadEventChannelSO _loadEventChannel;
+    //[SerializeField] private LoadEventChannelSO _waxedOn;
+    [SerializeField] private VoidEventChannelSO _waxOff;
     [Header("PersistentManagers")]
     [SerializeField] private string _persistentManagersSceneName = "PersistentManagers";
 
     private string _thisScene;
 
-    private void Awake()
+    private void Start()
     {
+        _thisScene = SceneManager.GetActiveScene().name;
         if (!SceneManager.GetSceneByName(_persistentManagersSceneName).isLoaded)
         {
-            _thisScene = SceneManager.GetActiveScene().name;
+            Debug.Log("SceneInitializer persistent not loaded");
             // Load the managers scene and scubscribe to its complete event
             // so that the EventSystem works properly
             SceneManager.LoadSceneAsync(_persistentManagersSceneName, LoadSceneMode.Additive)
                 .completed += PersistentManagersLoaded;
-            SceneManager.UnloadSceneAsync(_thisScene);
+        }
+        else
+        {
+            Debug.Log("SceneInitializer persistent already loaded");
+            //_waxOff.Raise();
         }
     }
 
     private void PersistentManagersLoaded(AsyncOperation unused)
     {
-        _loadEventChannel.Raise(_thisScene);
-        // If you need to know when managers are done loaded, raise event here
+        Debug.Log("SceneInitializer persistent finished loading");
+        _waxOff.Raise();
     }
 }

@@ -43,5 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bed9d7226989c4bc4aa8e4e2ceac657f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _loadEventChannel: {fileID: 11400000, guid: 95f78c6c346a948ae9d53ae41bc8e292, type: 2}
-  _sceneName: PersistentManagers
+  _waxedOn: {fileID: 11400000, guid: ed35f729cce464480a10f8e1d6e5b8b9, type: 2}
+  _waxOff: {fileID: 11400000, guid: 6eb875144a6e048a78f435a41198e402, type: 2}
+  _persistentManagersSceneName: PersistentManagers

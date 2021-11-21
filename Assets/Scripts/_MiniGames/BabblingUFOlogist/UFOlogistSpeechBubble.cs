@@ -22,7 +22,7 @@ public class UFOlogistSpeechBubble : MonoBehaviour
     [SerializeField] private float _winningRotationAmount;
     [SerializeField] private FinishEventChannelSO _finishEventChannel;
 
-    private Image _mask;
+    [SerializeField] private Image _mask;
     private float _progress = 0f;
 
     private void Start()

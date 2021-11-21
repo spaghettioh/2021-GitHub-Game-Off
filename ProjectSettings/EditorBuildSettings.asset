@@ -15,6 +15,18 @@ EditorBuildSettings:
     path: Assets/Scenes/WIP/AudioSystemDemo2.unity
     guid: d32eed8df3c91453cb5133a4c328787b
   - enabled: 1
+    path: Assets/Scenes/WIP/DemoSceneTitle.unity
+    guid: 7857e29b975d247a8bb15998d7f05ca7
+  - enabled: 1
+    path: Assets/Scenes/WIP/DemoSceneC.unity
+    guid: 5dfc10b73d57d4dbc84494729e648f9e
+  - enabled: 0
+    path: Assets/Scenes/WIP/DemoSceneA.unity
+    guid: 85e7341d459e44e419b95eb49b0511e0
+  - enabled: 1
+    path: Assets/Scenes/WIP/DemoSceneB.unity
+    guid: 4fcf0ef84f21840bab3a633cc419a961
+  - enabled: 1
     path: Assets/Scenes/MiniGames/BabblingUFOlogistGesticulating.unity
     guid: 71f293fda68a94aa999adef870e81a67
   - enabled: 1

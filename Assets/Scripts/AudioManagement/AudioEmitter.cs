@@ -21,9 +21,9 @@ public class AudioEmitter : MonoBehaviour
     public void PlaySoundEffect(AudioCueSO audioCue)
     {
         // Grab a random clip
-        AudioClip clip = GetRandomClip(audioCue.Clips);
-        _currentClip = clip;
-        _audioSource.PlayOneShot(clip);
+        AudioClip newClip = GetRandomClip(audioCue.Clips);
+        _currentClip = newClip;
+        _audioSource.PlayOneShot(newClip);
 
         // Let the audio manager know when it's done
         StartCoroutine(WrapUp());
@@ -36,14 +36,15 @@ public class AudioEmitter : MonoBehaviour
     public void PlayMusic(AudioCueSO audioCue)
     {
         // Grab a random clip
-        AudioClip clip = GetRandomClip(audioCue.Clips);
+        AudioClip newClip = GetRandomClip(audioCue.Clips);
         _audioSource.loop = true;
 
-        // Don't restart music if the current track is already playing
-        if (_currentClip != clip)
+        // Restart the music only if a different track is requested
+        if (_currentClip != newClip)
         {
-            _audioSource.clip = clip;
-            _currentClip = clip;
+            Debug.Log($"Music current: {_currentClip?.name} > {newClip?.name}");
+            _audioSource.clip = newClip;
+            _currentClip = newClip;
             _audioSource.Play();
         }
     }

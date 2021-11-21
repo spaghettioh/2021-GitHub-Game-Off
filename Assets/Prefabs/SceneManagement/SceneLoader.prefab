@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f834e7f009b8488aa80662436a81570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _loadEventChannel: {fileID: 11400000, guid: 95f78c6c346a948ae9d53ae41bc8e292, type: 2}
-  _screenWipeAnimator: {fileID: 0}
-  _screenWipeDuration: 1
+  _loadEventChannel: {fileID: 11400000, guid: ed35f729cce464480a10f8e1d6e5b8b9, type: 2}
+  _startWaxOn: {fileID: 11400000, guid: e15e1c2e61f2748e1942419dd94b54a5, type: 2}
+  _waxOnFinished: {fileID: 11400000, guid: 47698fe66e2654032860aa7f94d323be, type: 2}
+  _startWaxOff: {fileID: 11400000, guid: 6eb875144a6e048a78f435a41198e402, type: 2}
