@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c578c4af920354a95a0199cd416421c0, type: 3}
+  m_Name: SFX_FartLose
+  m_EditorClassIdentifier: 
+  CueType: 0
+  Clips:
+  - {fileID: 8300000, guid: 3ba44f78a59cb45d1b96bc79b9629383, type: 3}

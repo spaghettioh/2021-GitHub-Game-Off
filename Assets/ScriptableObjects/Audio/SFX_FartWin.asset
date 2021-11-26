@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c578c4af920354a95a0199cd416421c0, type: 3}
-  m_Name: SFX_Farts
+  m_Name: SFX_FartWin
   m_EditorClassIdentifier: 
   CueType: 0
   Clips:
