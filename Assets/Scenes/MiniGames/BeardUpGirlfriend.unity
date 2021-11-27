@@ -2095,6 +2095,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 86403492801755889, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2041270037841907560, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
       propertyPath: m_Name
       value: MiniGameFinish
@@ -2102,6 +2106,14 @@ PrefabInstance:
     - target: {fileID: 2041270037841907560, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4816230321271887546, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5080791377870690946, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5578786241390228364, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
       propertyPath: m_RootOrder

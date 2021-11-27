@@ -2541,14 +2541,18 @@ PrefabInstance:
     - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
       propertyPath: _winSound
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 30baa128a6fb54472b45fcb302861108, type: 2}
+    - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
+      propertyPath: _loseSound
+      value: 
+      objectReference: {fileID: 11400000, guid: b6d14e746cb0f4abf94da8ab7305e216, type: 2}
     - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
       propertyPath: _nextScene
       value: Title
       objectReference: {fileID: 0}
     - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
       propertyPath: OnWin.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
       propertyPath: OnLose.m_PersistentCalls.m_Calls.Array.size
@@ -2556,7 +2560,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
       propertyPath: OnWin.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
       propertyPath: OnWin.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -2573,7 +2577,7 @@ PrefabInstance:
     - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
       propertyPath: OnWin.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 11400000, guid: 1e16f6afb83564cc5b009aa8788b9c39, type: 2}
+      objectReference: {fileID: 1018563270}
     - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
       propertyPath: OnWin.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -2600,7 +2604,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
       propertyPath: OnWin.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Raise
+      value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
       propertyPath: OnWin.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -2612,7 +2616,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
       propertyPath: OnWin.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: AudioEventChannelSO, Assembly-CSharp
+      value: UnityEngine.Animator, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
       propertyPath: OnWin.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -2629,7 +2633,11 @@ PrefabInstance:
     - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
       propertyPath: OnWin.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 11400000, guid: 30baa128a6fb54472b45fcb302861108, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
+      propertyPath: OnWin.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Win
+      objectReference: {fileID: 0}
     - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
       propertyPath: OnWin.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
       value: 
@@ -2644,7 +2652,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: dd18bdf796e2f43de8be6a31216de870, type: 2}
     - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
       propertyPath: OnWin.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: AudioCueSO, Assembly-CSharp
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
       propertyPath: OnWin.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName

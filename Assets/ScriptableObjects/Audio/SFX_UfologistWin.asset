@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c578c4af920354a95a0199cd416421c0, type: 3}
-  m_Name: SFX_FartLose
+  m_Name: SFX_UfologistWin
   m_EditorClassIdentifier: 
   CueType: 0
   Clips:
-  - {fileID: 8300000, guid: 3ba44f78a59cb45d1b96bc79b9629383, type: 3}
+  - {fileID: 8300000, guid: 0652d5892ad1b432e88cc29112b478d4, type: 3}

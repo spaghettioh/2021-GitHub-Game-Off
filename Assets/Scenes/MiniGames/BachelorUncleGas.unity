@@ -1781,7 +1781,11 @@ PrefabInstance:
     - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
       propertyPath: _winSound
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 760e3d96a71f54c41aa6651f36b28b67, type: 2}
+    - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
+      propertyPath: _loseSound
+      value: 
+      objectReference: {fileID: 11400000, guid: ead544bf5869148f7955c456feea1c95, type: 2}
     - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
       propertyPath: _nextScene
       value: BuffUnderwearGargoyle
@@ -1792,15 +1796,15 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: fc94c98fbf195465b9a82bdc8f08728f, type: 2}
     - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
       propertyPath: OnWin.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
       propertyPath: OnLose.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
       propertyPath: OnWin.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
       propertyPath: OnWin.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -1816,12 +1820,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
       propertyPath: OnLose.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
       propertyPath: OnWin.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 11400000, guid: 1e16f6afb83564cc5b009aa8788b9c39, type: 2}
+      objectReference: {fileID: 817246517}
     - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
       propertyPath: OnWin.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -1837,7 +1841,7 @@ PrefabInstance:
     - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
       propertyPath: OnLose.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 11400000, guid: ead544bf5869148f7955c456feea1c95, type: 2}
+      objectReference: {fileID: 11400000, guid: 1e16f6afb83564cc5b009aa8788b9c39, type: 2}
     - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
       propertyPath: OnWin.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -1860,7 +1864,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
       propertyPath: OnWin.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Raise
+      value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
       propertyPath: OnWin.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -1876,11 +1880,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
       propertyPath: OnLose.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: 
+      value: Raise
       objectReference: {fileID: 0}
     - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
       propertyPath: OnWin.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: AudioEventChannelSO, Assembly-CSharp
+      value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
       propertyPath: OnWin.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -1896,7 +1900,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
       propertyPath: OnLose.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: AudioEventChannelSO, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
+      propertyPath: OnWin.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
       propertyPath: OnWin.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
@@ -1917,7 +1925,7 @@ PrefabInstance:
     - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
       propertyPath: OnWin.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 11400000, guid: 760e3d96a71f54c41aa6651f36b28b67, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
       propertyPath: OnWin.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
       value: 
@@ -1927,8 +1935,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: dd18bdf796e2f43de8be6a31216de870, type: 2}
     - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
+      propertyPath: OnLose.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 11400000, guid: ead544bf5869148f7955c456feea1c95, type: 2}
+    - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
       propertyPath: OnWin.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: AudioCueSO, Assembly-CSharp
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
       propertyPath: OnWin.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1944,7 +1956,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
       propertyPath: OnLose.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: 
+      value: AudioCueSO, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
