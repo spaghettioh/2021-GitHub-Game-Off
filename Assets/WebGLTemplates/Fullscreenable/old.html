@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | {{{ PRODUCT_NAME }}}</title>
+    <style>
+        .fullscreen-button {
+            background-color: transparent;
+            border: 0;
+            border-radius: 100%;
+            cursor: pointer;
+            height: 48px;
+            left: 16px;
+            padding: 12px;
+            position: absolute;
+            top: 16px;
+            width: 48px;
+        }
+
+        .fullscreen-button:hover {
+            background-color: ghostwhite;
+        }
+
+        .fullscreen-button:active {
+            background-color: lightgrey;
+        }
+
+        .fullscreen-button--icon {
+            border: 4px solid grey;
+            border-style: dashed;
+            box-sizing: border-box;
+            display: block;
+            width: 24px;
+            height: 24px;
+        }
+    </style>
+</head>
+<body style="margin: 0; position: relative; text-align: center;">
+    <canvas id="unity-canvas" width={{{ WIDTH }}} height={{{ HEIGHT }}} style="width: {{{ WIDTH }}}px; height: {{{ HEIGHT }}}px; background: {{{ BACKGROUND_FILENAME ? 'url(\'Build/' + BACKGROUND_FILENAME.replace(/'/g, '%27') + '\') center / cover' : BACKGROUND_COLOR }}}"></canvas>
+    <button class="fullscreen-button" onclick="unityInstance.SetFullscreen(1)">
+        <div class="fullscreen-button--icon"></div>
+    </button>
+    <script src="Build/{{{ LOADER_FILENAME }}}"></script>
+    <script>
+      var unityInstance = createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/{{{ DATA_FILENAME }}}",
+        frameworkUrl: "Build/{{{ FRAMEWORK_FILENAME }}}",
+        codeUrl: "Build/{{{ CODE_FILENAME }}}",
+#if MEMORY_FILENAME
+        memoryUrl: "Build/{{{ MEMORY_FILENAME }}}",
+#endif
+#if SYMBOLS_FILENAME
+        symbolsUrl: "Build/{{{ SYMBOLS_FILENAME }}}",
+#endif
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "{{{ COMPANY_NAME }}}",
+        productName: "{{{ PRODUCT_NAME }}}",
+        productVersion: "{{{ PRODUCT_VERSION }}}",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
+</body>
+</html>
