@@ -19,15 +19,22 @@ public class UFOlogistSpeechBubble : MonoBehaviour
     private float _leftHandPrevious;
     private float _totalRotation;
 
+
+    [SerializeField] private Transform _mask;
+    [SerializeField] private float _maskStartPosX;
+    [SerializeField] private float _maskEndPosX;
+    [SerializeField] private float _maskStartScaleX;
+    [SerializeField] private float _maskEndScaleX;
     [SerializeField] private float _winningRotationAmount;
     [SerializeField] private FinishEventChannelSO _finishEventChannel;
 
-    [SerializeField] private Image _mask;
+    [SerializeField] private Image _maskImage;
     private float _progress = 0f;
 
     private void Start()
     {
-        _mask.fillAmount = _progress;
+
+        _maskImage.fillAmount = _progress;
     }
 
     private void Update()
@@ -87,7 +94,7 @@ public class UFOlogistSpeechBubble : MonoBehaviour
                 _progress = 1f;
             }
 
-            _mask.fillAmount = _progress;
+            _maskImage.fillAmount = _progress;
 
             if (_progress == 1f)
             {
