@@ -16,7 +16,12 @@ public class DropArea : MonoBehaviour
                 _overhead.transform.position = transform.position;
 
                 _mouseEventChannel.RaiseDrop(_overhead);
-                _finishEventChannel.Raise(_overhead.gameObject);
+
+                if (!MiniGameFinish.MiniGameIsFinished)
+                {
+                    _finishEventChannel.Raise(_overhead.gameObject);
+                }
+
                 _overhead = null;
             }
         }
