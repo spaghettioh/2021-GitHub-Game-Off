@@ -39,7 +39,6 @@ public class BachelorUncleGas : MonoBehaviour
 
     private void UpdateBachelorLean()
     {
-        Debug.Log(_arm.transform.rotation.z);
         _bachelor.localPosition = new Vector3(
             _arm.transform.rotation.z * leftRight,
             Mathf.Abs(_arm.transform.rotation.z) * upDown,

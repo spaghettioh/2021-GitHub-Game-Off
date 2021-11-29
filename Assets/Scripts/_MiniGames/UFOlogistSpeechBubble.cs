@@ -1,102 +1,49 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class UFOlogistSpeechBubble : MonoBehaviour
 {
-    [SerializeField] private Transform RightArm;
-    private float _rightArmPrevious;
-    [SerializeField] private Transform RightForearm;
-    private float _rightForearmPrevious;
-    [SerializeField] private Transform RightHand;
-    private float _rightHandPrevious;
-    [SerializeField] private Transform LeftArm;
-    private float _leftArmPrevious;
-    [SerializeField] private Transform LeftForearm;
-    private float leftForearmPrevious;
-    [SerializeField] private Transform LeftHand;
-    private float _leftHandPrevious;
-    private float _totalRotation;
+    [SerializeField] private Transform _handEast;
+    private float _handEastPrevious;
+    [SerializeField] private Transform _handWest;
+    private float _handWestPrevious;
+    private float _totalRotation = 0f;
 
 
-    [SerializeField] private Transform _mask;
-    [SerializeField] private float _maskStartPosX;
-    [SerializeField] private float _maskEndPosX;
-    [SerializeField] private float _maskStartScaleX;
-    [SerializeField] private float _maskEndScaleX;
+    [SerializeField] private Animator _textMask;
     [SerializeField] private float _winningRotationAmount;
     [SerializeField] private FinishEventChannelSO _finishEventChannel;
 
-    [SerializeField] private Image _maskImage;
     private float _progress = 0f;
-
-    private void Start()
-    {
-
-        _maskImage.fillAmount = _progress;
-    }
 
     private void Update()
     {
-        float rightArmCurrent;
-        float rightArmDelta;
-        float rightForearmCurrent;
-        float rightForearmDelta;
-        float rightHandCurrent;
-        float rightHandDelta;
-        float leftArmCurrent;
-        float leftArmDelta;
-        float leftForearmCurrent;
-        float leftForearmDelta;
-        float leftHandCurrent;
-        float leftHandDelta;
+        float handEastCurrent;
+        float handEastDelta;
+        float handWestCurrent;
+        float handWestDelta;
 
-        rightArmCurrent = RightArm.rotation.z * Mathf.Rad2Deg;
-        rightArmDelta = Mathf.Abs(rightArmCurrent - _rightArmPrevious);
-        _rightArmPrevious = rightArmCurrent;
+        handEastCurrent = _handEast.rotation.z * Mathf.Rad2Deg;
+        handEastDelta = Mathf.Abs(handEastCurrent - _handEastPrevious);
+        _handEastPrevious = handEastCurrent;
 
-        rightForearmCurrent = RightForearm.rotation.z * Mathf.Rad2Deg;
-        rightForearmDelta = Mathf.Abs(rightForearmCurrent - _rightForearmPrevious);
-        _rightForearmPrevious = rightForearmCurrent;
+        handWestCurrent = _handWest.rotation.z * Mathf.Rad2Deg;
+        handWestDelta = Mathf.Abs(handWestCurrent - _handWestPrevious);
+        _handWestPrevious = handWestCurrent;
 
-        rightHandCurrent = RightHand.rotation.z * Mathf.Rad2Deg;
-        rightHandDelta = Mathf.Abs(rightHandCurrent - _rightHandPrevious);
-        _rightHandPrevious = rightHandCurrent;
-
-        leftArmCurrent = LeftArm.rotation.z * Mathf.Rad2Deg;
-        leftArmDelta = Mathf.Abs(leftArmCurrent - _leftArmPrevious);
-        _leftArmPrevious = leftArmCurrent;
-
-        leftForearmCurrent = LeftForearm.rotation.z * Mathf.Rad2Deg;
-        leftForearmDelta = Mathf.Abs(leftForearmCurrent - leftForearmPrevious);
-        leftForearmPrevious = leftForearmCurrent;
-
-        leftHandCurrent = LeftHand.rotation.z * Mathf.Rad2Deg;
-        leftHandDelta = Mathf.Abs(leftHandCurrent - _leftHandPrevious);
-        _leftHandPrevious = leftHandCurrent;
-
-        _totalRotation += (
-                rightArmDelta +
-                rightForearmDelta +
-                rightHandDelta +
-                leftArmDelta +
-                leftForearmDelta +
-                leftHandDelta
-            ) / _winningRotationAmount;
+        _totalRotation += (handEastDelta + handWestDelta);
 
         if (!MiniGameFinish.MiniGameIsFinished && _progress < 1f)
         {
-            _progress = _totalRotation;
+            _progress = _totalRotation / _winningRotationAmount;
 
             if (_progress > 1f)
             {
                 _progress = 1f;
             }
 
-            _maskImage.fillAmount = _progress;
+            _textMask.SetFloat("Progress", _progress);
 
-            if (_progress == 1f)
+            if (_progress >= 1f)
             {
                 _finishEventChannel.Raise(gameObject);
             }
