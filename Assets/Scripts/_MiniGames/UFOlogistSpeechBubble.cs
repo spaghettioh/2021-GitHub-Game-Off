@@ -14,6 +14,14 @@ public class UFOlogistSpeechBubble : MonoBehaviour
     [SerializeField] private FinishEventChannelSO _finishEventChannel;
 
     private float _progress = 0f;
+    private HingeJoint2D _handEastJoint;
+    private HingeJoint2D _handWestJoint;
+
+    private void Start()
+    {
+        _handEastJoint = _handEast.GetComponent<HingeJoint2D>();
+        _handWestJoint = _handWest.GetComponent<HingeJoint2D>();
+    }
 
     private void Update()
     {
@@ -47,6 +55,13 @@ public class UFOlogistSpeechBubble : MonoBehaviour
             {
                 _finishEventChannel.Raise(gameObject);
             }
+        }
+
+        // Bug out
+        if (_progress >= 1 && MiniGameFinish.MiniGameIsFinished)
+        {
+            _handEastJoint.useMotor = true;
+            _handWestJoint.useMotor = true;
         }
     }
 }

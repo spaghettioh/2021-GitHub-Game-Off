@@ -1308,7 +1308,7 @@ HingeJoint2D:
   m_ConnectedAnchor: {x: -6.51, y: -3.9}
   m_UseMotor: 0
   m_Motor:
-    m_MotorSpeed: 0
+    m_MotorSpeed: -900
     m_MaximumMotorForce: 10000
   m_UseLimits: 0
   m_AngleLimits:
@@ -2000,7 +2000,7 @@ HingeJoint2D:
   m_ConnectedAnchor: {x: 6.92, y: -3.87}
   m_UseMotor: 0
   m_Motor:
-    m_MotorSpeed: 0
+    m_MotorSpeed: 1000
     m_MaximumMotorForce: 10000
   m_UseLimits: 0
   m_AngleLimits:
@@ -2051,7 +2051,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296770665485089008, guid: a4e3e9b4d03a64286b34021b780685e6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7296770665485089020, guid: a4e3e9b4d03a64286b34021b780685e6, type: 3}
       propertyPath: m_Pivot.x
