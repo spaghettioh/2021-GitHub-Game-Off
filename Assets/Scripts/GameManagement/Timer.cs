@@ -34,5 +34,10 @@ public class Timer : MonoBehaviour
                 _timerProgress.gameObject.SetActive(false);
             }
         }
+
+        if (MiniGameFinish.MiniGameIsFinished)
+        {
+            _timerProgress.enabled = false;
+        }
     }
 }
