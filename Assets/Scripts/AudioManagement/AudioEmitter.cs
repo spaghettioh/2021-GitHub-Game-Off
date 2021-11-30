@@ -55,7 +55,7 @@ public class AudioEmitter : MonoBehaviour
     /// <returns></returns>
     private AudioClip GetRandomClip(List<AudioClip> clips)
     {
-        AudioClip clip = clips[Random.Range(0, clips.Count - 1)];
+        AudioClip clip = clips[Random.Range(0, clips.Count)];
         return clip;
     }
 

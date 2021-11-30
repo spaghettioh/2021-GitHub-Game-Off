@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 public class UFOlogistArmController : MonoBehaviour
 {
@@ -50,11 +47,6 @@ public class UFOlogistArmController : MonoBehaviour
     {
         _isDragging = true;
         _mouseCursorState.CursorState = CursorStyle.Grab;
-
-        //// Snap the object to the mouse cursor
-        //transform.position = Camera.main.ScreenToWorldPoint(
-        //    new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
-        //transform.localScale = new Vector3(1.25f, 1.25f, 1f);
     }
 
     private void OnMouseUp()

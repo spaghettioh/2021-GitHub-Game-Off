@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BuffUnderwearGargoyle : MonoBehaviour
@@ -8,27 +6,9 @@ public class BuffUnderwearGargoyle : MonoBehaviour
     [SerializeField] private FinishEventChannelSO _finishEventChannel;
     [SerializeField] private MouseCursorStateSO _mouseCursorState;
 
-    private float _liftThreshold = 280f;
-    private float _restThreshold = 1f;
-
     private int _lifts = 0;
-
-    [SerializeField] private int _rotationSpeed;
-    [Space]
-
-    private float _rotationZ;
     private bool _isDragging;
     private bool _mouseDown;
-
-    // Forces the arm to fall to resting position
-    private bool _canLift = true;
-
-    private enum State
-    {
-        Lifting,
-        Falling,
-    }
-    private State state = State.Lifting;
 
     private void OnMouseOver()
     {
@@ -83,8 +63,6 @@ public class BuffUnderwearGargoyle : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log($"Forearm: {Mathf.Abs(_forearmBody.transform.localEulerAngles.z)}");
-
         if (!MiniGameFinish.MiniGameIsFinished)
         {
             if (_lifts >= 2)
@@ -98,26 +76,8 @@ public class BuffUnderwearGargoyle : MonoBehaviour
         }
     }
 
-    private void CheckThreshold()
-    {
-        float angle = Mathf.Abs(_forearmBody.transform.localEulerAngles.z);
-
-        if (angle < _liftThreshold && angle > _restThreshold)
-        {
-            _lifts += 1;
-            _canLift = false;
-        }
-
-        //if (_lifts >= 2)
-        //{
-        //    _forearm.freezeRotation = true;
-        //    _finishEventChannel.Raise(gameObject);
-        //}
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         _lifts += 1;
-        Debug.Log("Lifted");
     }
 }
