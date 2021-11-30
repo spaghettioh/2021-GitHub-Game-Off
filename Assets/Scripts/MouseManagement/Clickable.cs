@@ -9,6 +9,8 @@ public class Clickable : MonoBehaviour
     [SerializeField] private MouseCursorStateSO _mouseCursorState;
     [SerializeField] private MouseEventChannelSO _clickEventChannel;
 
+    [SerializeField] private UnityEvent _onClick;
+
     private Vector3 _screenPoint;
     private Vector3 _offset;
     private bool _mouseDown;
@@ -30,6 +32,7 @@ public class Clickable : MonoBehaviour
         _clickEventChannel.RaiseClick(_offset);
         _mouseCursorState.CursorState = CursorStyle.Press;
         _mouseDown = true;
+        _onClick.Invoke();
     }
 
     private void OnMouseUp()

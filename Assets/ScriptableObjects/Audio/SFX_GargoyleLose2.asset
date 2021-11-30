@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c578c4af920354a95a0199cd416421c0, type: 3}
-  m_Name: Music_DKC2Funky
+  m_Name: SFX_GargoyleLose2
   m_EditorClassIdentifier: 
-  CueType: 1
+  CueType: 0
   Clips:
-  - {fileID: 8300000, guid: 621b2a91bc81f493e9617152234e7deb, type: 3}
+  - {fileID: 8300000, guid: 08efa1e9f409148dc8037cdd2764a280, type: 3}
+  - {fileID: 8300000, guid: 5a94f9917ac984abdaf0bf23c25f1133, type: 3}

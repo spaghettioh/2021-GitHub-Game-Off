@@ -241,6 +241,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mouseCursorState: {fileID: 11400000, guid: 60fbbea9032564ff39dc285cebe57a5d, type: 2}
   _clickEventChannel: {fileID: 11400000, guid: 7aa913e88515948a5a6ac03fe49b15a0, type: 2}
+  _onClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: ed35f729cce464480a10f8e1d6e5b8b9, type: 2}
+        m_TargetAssemblyTypeName: LoadEventChannelSO, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: BeardUpGirlfriend
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!61 &45964050
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -301,6 +316,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mouseCursorState: {fileID: 11400000, guid: 60fbbea9032564ff39dc285cebe57a5d, type: 2}
   _clickEventChannel: {fileID: 11400000, guid: 7aa913e88515948a5a6ac03fe49b15a0, type: 2}
+  _onClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 1e16f6afb83564cc5b009aa8788b9c39, type: 2}
+        m_TargetAssemblyTypeName: AudioEventChannelSO, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 5299786bcb0c44397a3638b4cce9195b, type: 2}
+          m_ObjectArgumentAssemblyTypeName: AudioCueSO, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!58 &163090323
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -373,8 +403,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -687975951
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 82e8c322b6bf24fc9a3090f9a0cb02d4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -777,10 +807,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1404949493}
+  - component: {fileID: 1404949489}
   - component: {fileID: 1404949492}
   - component: {fileID: 1404949491}
   - component: {fileID: 1404949490}
-  - component: {fileID: 1404949489}
   m_Layer: 0
   m_Name: Dragger
   m_TagString: Untagged
@@ -802,6 +832,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mouseCursorState: {fileID: 11400000, guid: 60fbbea9032564ff39dc285cebe57a5d, type: 2}
   _mouseEventChannel: {fileID: 11400000, guid: 7aa913e88515948a5a6ac03fe49b15a0, type: 2}
+  _onGrab:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 1e16f6afb83564cc5b009aa8788b9c39, type: 2}
+        m_TargetAssemblyTypeName: AudioEventChannelSO, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 2b7bd12895f514858b2aa05534559a3a, type: 2}
+          m_ObjectArgumentAssemblyTypeName: AudioCueSO, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _onDrop:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!58 &1404949490
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -874,9 +922,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -687975951
+  m_SortingLayer: 3
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: dee1be0d78a3f44daaa1fb104ec2e1c7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

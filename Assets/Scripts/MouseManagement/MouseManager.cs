@@ -78,6 +78,6 @@ public class MouseManager : MonoBehaviour
 
     private void MouseClicked(Vector2 position)
     {
-        Debug.Log("Mouse clicked over object!");
+        //Debug.Log("Mouse clicked over object!");
     }
 }

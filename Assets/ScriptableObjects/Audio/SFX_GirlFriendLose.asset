@@ -15,3 +15,4 @@ MonoBehaviour:
   CueType: 0
   Clips:
   - {fileID: 8300000, guid: 8706b4cc49a6a492c8643f328a03bac6, type: 3}
+  - {fileID: 8300000, guid: 62060107bde6c4ba69490243b24968fb, type: 3}

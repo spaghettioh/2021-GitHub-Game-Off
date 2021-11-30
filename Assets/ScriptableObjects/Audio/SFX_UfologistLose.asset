@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CueType: 0
   Clips:
-  - {fileID: 8300000, guid: 62060107bde6c4ba69490243b24968fb, type: 3}
+  - {fileID: 8300000, guid: 73a1b9fa1cb50487f9986ad95c60cb29, type: 3}
