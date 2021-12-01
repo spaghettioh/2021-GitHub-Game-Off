@@ -6,11 +6,16 @@ public class MiniGameFinish : MonoBehaviour
 {
     [Header("When finished...")]
     [SerializeField] private string _nextScene;
+    [Space]
     public UnityEvent OnWin;
     public UnityEvent OnLose;
-    [Space]
 
-    [Header("// Prefab stuff")]
+    [Header("Listening to...")]
+    [SerializeField] private FinishEventChannelSO _finishEventChannel;
+
+    [Header("Broadcasting to...")]
+    [SerializeField] private LoadEventChannelSO _loadEventchannel;
+
     private static bool _miniGameIsFinished = false;
     // Used by other scripts to know if they should keep working
     public static bool InteractionsDisabled
@@ -19,29 +24,14 @@ public class MiniGameFinish : MonoBehaviour
         private set { _miniGameIsFinished = value; }
     }
 
-    [Header("OnWin...")]
-    [SerializeField] private SpriteRenderer _winBackground;
-    [SerializeField] private AudioCueSO _winSound;
-
-    [Header("OnLose...")]
-    [SerializeField] private SpriteRenderer _loseBackground;
-    [SerializeField] private AudioCueSO _loseSound;
-
-    [Header("Listening to...")]
-    [SerializeField] private FinishEventChannelSO _finishEventChannel;
-
-    [Header("Broadcasting to...")]
-    [SerializeField] private LoadEventChannelSO _loadEventchannel;
-    [SerializeField] private AudioEventChannelSO _audioEventChannel;
+    private void Awake()
+    {
+        InteractionsDisabled = false;
+    }
 
     private void OnEnable()
     {
         _finishEventChannel.OnFinished += Finished;
-    }
-
-    private void Awake()
-    {
-        InteractionsDisabled = false;
     }
 
     private void OnDisable()
@@ -75,8 +65,6 @@ public class MiniGameFinish : MonoBehaviour
     /// </summary>
     private void Win()
     {
-        _winBackground?.gameObject.SetActive(true);
-        if (_winSound != null) _audioEventChannel.Raise(_winSound);
         OnWin.Invoke();
     }
 
@@ -85,10 +73,7 @@ public class MiniGameFinish : MonoBehaviour
     /// </summary>
     private void Lose()
     {
-        _loseBackground?.gameObject.SetActive(true);
-        if (_loseSound != null) _audioEventChannel.Raise(_loseSound);
         OnLose.Invoke();
-
     }
 
     /// <summary>

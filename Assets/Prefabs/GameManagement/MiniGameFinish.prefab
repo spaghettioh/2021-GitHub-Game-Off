@@ -79,7 +79,7 @@ SpriteRenderer:
   m_Size: {x: 6.26, y: 4.17}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2041270037841907560
@@ -136,9 +136,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _winBackground: {fileID: 4816230321271887546}
-  _winSound: {fileID: 11400000, guid: 7de2782af599e4f7197b335fd73ad7bb, type: 2}
+  _winSound: {fileID: 0}
   _loseBackground: {fileID: 86403492801755889}
-  _loseSound: {fileID: 11400000, guid: 27af0e761bdd74de7b20829b1a33e890, type: 2}
+  _loseSound: {fileID: 0}
   _finishEventChannel: {fileID: 11400000, guid: fc94c98fbf195465b9a82bdc8f08728f, type: 2}
   _loadEventchannel: {fileID: 11400000, guid: ed35f729cce464480a10f8e1d6e5b8b9, type: 2}
   _audioEventChannel: {fileID: 11400000, guid: 1e16f6afb83564cc5b009aa8788b9c39, type: 2}
@@ -303,6 +303,6 @@ SpriteRenderer:
   m_Size: {x: 6.26, y: 4.17}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
