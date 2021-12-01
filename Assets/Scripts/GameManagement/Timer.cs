@@ -19,7 +19,7 @@ public class Timer : MonoBehaviour
 
     private void Update()
     {
-        if (!MiniGameFinish.MiniGameIsFinished)
+        if (!MiniGameFinish.InteractionsDisabled)
         {
             if (_timeRemaining > 0)
             {
@@ -35,7 +35,7 @@ public class Timer : MonoBehaviour
             }
         }
 
-        if (MiniGameFinish.MiniGameIsFinished)
+        if (MiniGameFinish.InteractionsDisabled)
         {
             _timerProgress.enabled = false;
         }

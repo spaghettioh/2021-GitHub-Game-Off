@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-[RequireComponent(typeof (Collider2D))]
 public class Draggable : MonoBehaviour
 {
     [SerializeField] private MouseCursorStateSO _mouseCursorState;
@@ -17,41 +16,56 @@ public class Draggable : MonoBehaviour
 
     private void OnMouseOver()
     {
-        if (IsMouseFree())
+        if (!MiniGameFinish.InteractionsDisabled)
         {
-            if (!_isDragging)
+            if (IsMouseFree())
             {
-                _mouseCursorState.CursorState = CursorStyle.Open;
+                if (!_isDragging)
+                {
+                    _mouseCursorState.CursorState = CursorStyle.Open;
+                }
             }
         }
     }
 
     private void OnMouseDown()
     {
-        _isDragging = true;
-        _mouseCursorState.CursorState = CursorStyle.Grab;
+        if (!MiniGameFinish.InteractionsDisabled)
+        {
+            _isDragging = true;
+            _mouseCursorState.CursorState = CursorStyle.Grab;
 
-        // Snap the object to the mouse cursor
-        transform.position = Camera.main.ScreenToWorldPoint(
-            new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
-        transform.localScale = new Vector3(1.25f, 1.25f, 1f);
-        _onGrab.Invoke();
+            // Snap the object to the mouse cursor
+            transform.position = Camera.main.ScreenToWorldPoint(
+                new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
+            transform.localScale = new Vector3(1.25f, 1.25f, 1f);
+            _onGrab.Invoke();
+        }
     }
 
     private void OnMouseDrag()
     {
-        Vector3 curScreenPoint = new Vector3(Input.mousePosition.x,
+        if (!MiniGameFinish.InteractionsDisabled)
+        {
+            Vector3 curScreenPoint = new Vector3(Input.mousePosition.x,
             Input.mousePosition.y, 0);
-        Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint);
-        transform.position = new Vector3(curPosition.x, curPosition.y, 0);
+            Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint);
+            transform.position = new Vector3(curPosition.x, curPosition.y, 0);
+        }
     }
 
     private void OnMouseUp()
     {
-        _isDragging = false;
-        transform.localScale = new Vector3(1f, 1f, 1f);
-        _mouseCursorState.CursorState = CursorStyle.Open;
-        _onDrop.Invoke();
+        if (!MiniGameFinish.InteractionsDisabled)
+        {
+            if (_isDragging)
+            {
+                _onDrop.Invoke();
+            }
+            _isDragging = false;
+            transform.localScale = new Vector3(1f, 1f, 1f);
+            _mouseCursorState.CursorState = CursorStyle.Normal;
+        }
     }
 
     private void OnMouseExit()

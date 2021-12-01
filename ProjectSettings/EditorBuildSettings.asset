@@ -9,11 +9,20 @@ EditorBuildSettings:
     path: Assets/Scenes/Initialization.unity
     guid: ac4b187c15ceb4067ac99d0efedb16c2
   - enabled: 1
-    path: Assets/Scenes/Title.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/Scenes/PersistentManagers.unity
     guid: 759409660aaee420fb4dbe9653d62c8c
+  - enabled: 1
+    path: Assets/Scenes/UI/Title.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/UI/Credits.unity
+    guid: 98386dcc5a0114a2e95929852c42b5a0
+  - enabled: 1
+    path: Assets/Scenes/Tutorials/TutorialClick.unity
+    guid: 954eb183761ac45ca8bc6ae5f9815644
+  - enabled: 1
+    path: Assets/Scenes/Tutorials/TutorialDrag.unity
+    guid: f5f7d575c09c547bcbba7b15e1a41eb1
   - enabled: 1
     path: Assets/Scenes/_MiniGames/BeardUpGirlfriend.unity
     guid: 4fd73294a2d2f40b9ba1e69eae6c70b9

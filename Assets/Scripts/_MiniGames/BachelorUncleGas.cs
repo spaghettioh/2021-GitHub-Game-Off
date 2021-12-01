@@ -17,7 +17,7 @@ public class BachelorUncleGas : MonoBehaviour
 
     private void Update()
     {
-        if (!MiniGameFinish.MiniGameIsFinished)
+        if (!MiniGameFinish.InteractionsDisabled)
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -48,9 +48,9 @@ public class BachelorUncleGas : MonoBehaviour
     private void CheckThreshold()
     {
         if (Mathf.Abs(_arm.transform.rotation.z) > _threshold ||
-            MiniGameFinish.MiniGameIsFinished)
+            MiniGameFinish.InteractionsDisabled)
         {
-            if (!MiniGameFinish.MiniGameIsFinished)
+            if (!MiniGameFinish.InteractionsDisabled)
             {
                 _finishEventChannel.Raise(gameObject);
             }

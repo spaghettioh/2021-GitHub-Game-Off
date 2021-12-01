@@ -40,7 +40,7 @@ public class UFOlogistSpeechBubble : MonoBehaviour
 
         _totalRotation += (handEastDelta + handWestDelta);
 
-        if (!MiniGameFinish.MiniGameIsFinished && _progress < 1f)
+        if (!MiniGameFinish.InteractionsDisabled && _progress < 1f)
         {
             _progress = _totalRotation / _winningRotationAmount;
 
@@ -58,7 +58,7 @@ public class UFOlogistSpeechBubble : MonoBehaviour
         }
 
         // Bug out
-        if (_progress >= 1 && MiniGameFinish.MiniGameIsFinished)
+        if (_progress >= 1 && MiniGameFinish.InteractionsDisabled)
         {
             _handEastJoint.useMotor = true;
             _handWestJoint.useMotor = true;

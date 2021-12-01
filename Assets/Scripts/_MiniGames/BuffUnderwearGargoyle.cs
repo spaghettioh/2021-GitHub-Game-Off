@@ -63,7 +63,7 @@ public class BuffUnderwearGargoyle : MonoBehaviour
 
     private void Update()
     {
-        if (!MiniGameFinish.MiniGameIsFinished)
+        if (!MiniGameFinish.InteractionsDisabled)
         {
             if (_lifts >= 2)
             {

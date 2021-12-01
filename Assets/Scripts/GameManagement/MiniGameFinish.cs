@@ -13,7 +13,7 @@ public class MiniGameFinish : MonoBehaviour
     [Header("// Prefab stuff")]
     private static bool _miniGameIsFinished = false;
     // Used by other scripts to know if they should keep working
-    public static bool MiniGameIsFinished
+    public static bool InteractionsDisabled
     {
         get { return _miniGameIsFinished; }
         private set { _miniGameIsFinished = value; }
@@ -41,7 +41,7 @@ public class MiniGameFinish : MonoBehaviour
 
     private void Awake()
     {
-        MiniGameIsFinished = false;
+        InteractionsDisabled = false;
     }
 
     private void OnDisable()
@@ -51,7 +51,7 @@ public class MiniGameFinish : MonoBehaviour
 
     private void Finished(GameObject source)
     {
-        MiniGameIsFinished = true;
+        InteractionsDisabled = true;
         StartCoroutine(NextScene());
 
         if (source.GetComponent<WinCondition>() != null)

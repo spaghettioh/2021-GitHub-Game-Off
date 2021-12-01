@@ -10,6 +10,7 @@ public class Clickable : MonoBehaviour
     [SerializeField] private MouseEventChannelSO _clickEventChannel;
 
     [SerializeField] private UnityEvent _onClick;
+    private bool _canClick = true;
 
     private Vector3 _screenPoint;
     private Vector3 _offset;
@@ -25,14 +26,18 @@ public class Clickable : MonoBehaviour
 
     private void OnMouseDown()
     {
-        _offset = transform.position - Camera.main.ScreenToWorldPoint(
-            new Vector3(Input.mousePosition.x, Input.mousePosition.y,
-                _screenPoint.z)
-            );
-        _clickEventChannel.RaiseClick(_offset);
-        _mouseCursorState.CursorState = CursorStyle.Press;
-        _mouseDown = true;
-        _onClick.Invoke();
+        if (_canClick)
+        {
+            _offset = transform.position - Camera.main.ScreenToWorldPoint(
+                new Vector3(Input.mousePosition.x, Input.mousePosition.y,
+                    _screenPoint.z)
+                );
+            _clickEventChannel.RaiseClick(_offset);
+            _mouseCursorState.CursorState = CursorStyle.Press;
+            _mouseDown = true;
+
+            _onClick.Invoke();
+        }
     }
 
     private void OnMouseUp()
@@ -44,5 +49,10 @@ public class Clickable : MonoBehaviour
     private void OnMouseExit()
     {
         _mouseCursorState.CursorState = CursorStyle.Normal;
+    }
+
+    public void DisableClickable()
+    {
+        _canClick = false;
     }
 }

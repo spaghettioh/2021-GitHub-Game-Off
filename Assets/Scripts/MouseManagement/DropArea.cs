@@ -1,15 +1,18 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 public class DropArea : MonoBehaviour
 {
     [SerializeField] private MouseEventChannelSO _mouseEventChannel;
     [SerializeField] private FinishEventChannelSO _finishEventChannel;
+    [SerializeField] private UnityEvent _onDrop;
 
+    private bool _canDrop = true;
     private Draggable _overhead;
 
     private void Update()
     {
-        if (_overhead != null)
+        if (_overhead != null && _canDrop)
         {
             if (!_overhead.IsDragging)
             {
@@ -17,11 +20,12 @@ public class DropArea : MonoBehaviour
 
                 _mouseEventChannel.RaiseDrop(_overhead);
 
-                if (!MiniGameFinish.MiniGameIsFinished)
+                if (!MiniGameFinish.InteractionsDisabled)
                 {
                     _finishEventChannel.Raise(_overhead.gameObject);
                 }
 
+                _onDrop.Invoke();
                 _overhead = null;
             }
         }
@@ -43,5 +47,10 @@ public class DropArea : MonoBehaviour
         {
             _overhead = null;
         }
+    }
+
+    public void DisableDropArea()
+    {
+        _canDrop = false;
     }
 }
