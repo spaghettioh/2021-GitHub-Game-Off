@@ -141,7 +141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &39785461
 Transform:
   m_ObjectHideFlags: 0
@@ -257,7 +257,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &251631675
 Transform:
   m_ObjectHideFlags: 0
@@ -365,6 +365,7 @@ GameObject:
   m_Component:
   - component: {fileID: 259957264}
   - component: {fileID: 259957261}
+  - component: {fileID: 259957268}
   - component: {fileID: 259957266}
   - component: {fileID: 259957263}
   - component: {fileID: 259957267}
@@ -464,7 +465,7 @@ SpriteRenderer:
   m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4ed02b7a340d24329b4b039494ff9a11, type: 3}
-  m_Color: {r: 0.8867924, g: 0.33045566, b: 0.33045566, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -541,6 +542,34 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &259957268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259957260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a41aac0149fd451da4c72da58c29355, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _voidEventChannel: {fileID: 11400000, guid: a3fa2e703dcc44d67b5f2898f169f2ae, type: 2}
+  OnEventRaised:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 874587353}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &326291355
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,7 +588,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &326291356
 Transform:
   m_ObjectHideFlags: 0
@@ -675,7 +704,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &465590740
 Transform:
   m_ObjectHideFlags: 0
@@ -783,6 +812,7 @@ GameObject:
   m_Component:
   - component: {fileID: 765616867}
   - component: {fileID: 765616864}
+  - component: {fileID: 765616871}
   - component: {fileID: 765616869}
   - component: {fileID: 765616866}
   - component: {fileID: 765616870}
@@ -882,7 +912,7 @@ SpriteRenderer:
   m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b54586e6236b24914881640b9243a9e8, type: 3}
-  m_Color: {r: 0.8867924, g: 0.33045566, b: 0.33045566, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -959,6 +989,34 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &765616871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765616863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a41aac0149fd451da4c72da58c29355, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _voidEventChannel: {fileID: 11400000, guid: a3fa2e703dcc44d67b5f2898f169f2ae, type: 2}
+  OnEventRaised:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 39785460}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1001 &812544516
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -966,6 +1024,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 174443999549347138, guid: a4e3e9b4d03a64286b34021b780685e6, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: f24a43e566d824de8b5c08998e4c4eb7, type: 2}
+    - target: {fileID: 3787821695248993829, guid: a4e3e9b4d03a64286b34021b780685e6, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 2060
+      objectReference: {fileID: 0}
+    - target: {fileID: 3787821695248993829, guid: a4e3e9b4d03a64286b34021b780685e6, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 256.49414
+      objectReference: {fileID: 0}
+    - target: {fileID: 5192896138004513799, guid: a4e3e9b4d03a64286b34021b780685e6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cd2cf76633427492883a296468ddf13a, type: 3}
     - target: {fileID: 7296770664966084383, guid: a4e3e9b4d03a64286b34021b780685e6, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -988,7 +1062,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7296770665485089020, guid: a4e3e9b4d03a64286b34021b780685e6, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7296770665485089020, guid: a4e3e9b4d03a64286b34021b780685e6, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1082,7 +1156,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &826970890
 Transform:
   m_ObjectHideFlags: 0
@@ -1190,6 +1264,7 @@ GameObject:
   m_Component:
   - component: {fileID: 858626356}
   - component: {fileID: 858626355}
+  - component: {fileID: 858626357}
   - component: {fileID: 858626354}
   - component: {fileID: 858626353}
   - component: {fileID: 858626352}
@@ -1309,7 +1384,7 @@ SpriteRenderer:
   m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: dc9e2fd8bcc294a10b23e5ae0ab5485e, type: 3}
-  m_Color: {r: 0.8867924, g: 0.33045566, b: 0.33045566, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1366,6 +1441,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &858626357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858626349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a41aac0149fd451da4c72da58c29355, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _voidEventChannel: {fileID: 11400000, guid: a3fa2e703dcc44d67b5f2898f169f2ae, type: 2}
+  OnEventRaised:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1214588870}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &874587353
 GameObject:
   m_ObjectHideFlags: 0
@@ -1384,7 +1487,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &874587354
 Transform:
   m_ObjectHideFlags: 0
@@ -1492,6 +1595,7 @@ GameObject:
   m_Component:
   - component: {fileID: 880612226}
   - component: {fileID: 880612225}
+  - component: {fileID: 880612227}
   - component: {fileID: 880612224}
   - component: {fileID: 880612223}
   - component: {fileID: 880612222}
@@ -1611,7 +1715,7 @@ SpriteRenderer:
   m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 8ae9dc65b44474e16982aff34eb69c9e, type: 3}
-  m_Color: {r: 0.8867924, g: 0.33045566, b: 0.33045566, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1668,6 +1772,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &880612227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880612219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a41aac0149fd451da4c72da58c29355, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _voidEventChannel: {fileID: 11400000, guid: a3fa2e703dcc44d67b5f2898f169f2ae, type: 2}
+  OnEventRaised:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 465590739}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &882423588
 GameObject:
   m_ObjectHideFlags: 0
@@ -1780,6 +1912,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1151676534}
   - component: {fileID: 1151676531}
+  - component: {fileID: 1151676538}
   - component: {fileID: 1151676536}
   - component: {fileID: 1151676533}
   - component: {fileID: 1151676537}
@@ -1879,7 +2012,7 @@ SpriteRenderer:
   m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 725777b23b124430995855f23a0307e0, type: 3}
-  m_Color: {r: 0.8867924, g: 0.33045566, b: 0.33045566, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1956,6 +2089,34 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1151676538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151676530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a41aac0149fd451da4c72da58c29355, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _voidEventChannel: {fileID: 11400000, guid: a3fa2e703dcc44d67b5f2898f169f2ae, type: 2}
+  OnEventRaised:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 326291355}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &1214588870
 GameObject:
   m_ObjectHideFlags: 0
@@ -1974,7 +2135,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1214588871
 Transform:
   m_ObjectHideFlags: 0
@@ -2082,6 +2243,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1368409989}
   - component: {fileID: 1368409986}
+  - component: {fileID: 1368409993}
   - component: {fileID: 1368409991}
   - component: {fileID: 1368409988}
   - component: {fileID: 1368409992}
@@ -2181,7 +2343,7 @@ SpriteRenderer:
   m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7261ecc8926b94960b293a3eb9dbe62c, type: 3}
-  m_Color: {r: 0.8867924, g: 0.33045566, b: 0.33045566, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2258,6 +2420,34 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1368409993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368409985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a41aac0149fd451da4c72da58c29355, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _voidEventChannel: {fileID: 11400000, guid: a3fa2e703dcc44d67b5f2898f169f2ae, type: 2}
+  OnEventRaised:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1777563407}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &1614736344
 GameObject:
   m_ObjectHideFlags: 0
@@ -2268,6 +2458,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1614736348}
   - component: {fileID: 1614736345}
+  - component: {fileID: 1614736352}
   - component: {fileID: 1614736350}
   - component: {fileID: 1614736347}
   - component: {fileID: 1614736351}
@@ -2367,7 +2558,7 @@ SpriteRenderer:
   m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2101e557607834f229b24973e32c2159, type: 3}
-  m_Color: {r: 0.8867924, g: 0.33045566, b: 0.33045566, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2444,6 +2635,34 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1614736352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1614736344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a41aac0149fd451da4c72da58c29355, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _voidEventChannel: {fileID: 11400000, guid: a3fa2e703dcc44d67b5f2898f169f2ae, type: 2}
+  OnEventRaised:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 826970889}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &1777563407
 GameObject:
   m_ObjectHideFlags: 0
@@ -2462,7 +2681,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1777563408
 Transform:
   m_ObjectHideFlags: 0
@@ -2570,6 +2789,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1778041611}
   - component: {fileID: 1778041608}
+  - component: {fileID: 1778041615}
   - component: {fileID: 1778041613}
   - component: {fileID: 1778041610}
   - component: {fileID: 1778041614}
@@ -2669,7 +2889,7 @@ SpriteRenderer:
   m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d198bb26222344bdda91e44b0fe91dc1, type: 3}
-  m_Color: {r: 0.8867924, g: 0.33045566, b: 0.33045566, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2746,6 +2966,34 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1778041615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778041607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a41aac0149fd451da4c72da58c29355, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _voidEventChannel: {fileID: 11400000, guid: a3fa2e703dcc44d67b5f2898f169f2ae, type: 2}
+  OnEventRaised:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 251631674}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1001 &1953121864
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2759,7 +3007,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 97c2610a0017f41c590fcfcf649788fb, type: 2}
     - target: {fileID: 1864772050855276477, guid: 81840adc73c0b4524bfe2585b0c21c01, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1864772050855276477, guid: 81840adc73c0b4524bfe2585b0c21c01, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2816,7 +3064,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3803418839825125271, guid: 4a639e7b56c3a4141b84f5c2ea1760ba, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3803418839825125271, guid: 4a639e7b56c3a4141b84f5c2ea1760ba, type: 3}
       propertyPath: m_LocalPosition.x

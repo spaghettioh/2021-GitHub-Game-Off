@@ -689,6 +689,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 174443999549347138, guid: a4e3e9b4d03a64286b34021b780685e6, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: 367e9c023808442f0a1de6754802ea88, type: 2}
     - target: {fileID: 3617328941554477636, guid: a4e3e9b4d03a64286b34021b780685e6, type: 3}
       propertyPath: OnEventRaised.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -720,6 +724,34 @@ PrefabInstance:
     - target: {fileID: 3617328941554477636, guid: a4e3e9b4d03a64286b34021b780685e6, type: 3}
       propertyPath: OnEventRaised.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3787821695248993829, guid: a4e3e9b4d03a64286b34021b780685e6, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 2732
+      objectReference: {fileID: 0}
+    - target: {fileID: 3787821695248993829, guid: a4e3e9b4d03a64286b34021b780685e6, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 256.125
+      objectReference: {fileID: 0}
+    - target: {fileID: 5192896138004513799, guid: a4e3e9b4d03a64286b34021b780685e6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1adaecfb851f246c0bda0a1fd78cb26b, type: 3}
+    - target: {fileID: 5192896138004513799, guid: a4e3e9b4d03a64286b34021b780685e6, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5192896138004513799, guid: a4e3e9b4d03a64286b34021b780685e6, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5192896138004513799, guid: a4e3e9b4d03a64286b34021b780685e6, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5192896138004513799, guid: a4e3e9b4d03a64286b34021b780685e6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7296770665485089008, guid: a4e3e9b4d03a64286b34021b780685e6, type: 3}
       propertyPath: m_Name
