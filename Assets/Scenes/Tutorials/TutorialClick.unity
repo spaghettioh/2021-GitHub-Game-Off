@@ -263,6 +263,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6876088385791909182, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
+      propertyPath: _nextScene
+      value: BeardUpGirlfriend
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40cbac4ad8d0447249b5cfd0fbf53275, type: 3}
 --- !u!1001 &1273537911
@@ -282,7 +286,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8389346706141084275, guid: eb7975df17c714cc7922bc5b6e54b9bd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8389346706141084275, guid: eb7975df17c714cc7922bc5b6e54b9bd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -290,7 +294,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8389346706141084275, guid: eb7975df17c714cc7922bc5b6e54b9bd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9901585
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8389346706141084275, guid: eb7975df17c714cc7922bc5b6e54b9bd, type: 3}
       propertyPath: m_LocalRotation.x
@@ -302,7 +306,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8389346706141084275, guid: eb7975df17c714cc7922bc5b6e54b9bd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.13995074
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8389346706141084275, guid: eb7975df17c714cc7922bc5b6e54b9bd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -314,7 +318,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8389346706141084275, guid: eb7975df17c714cc7922bc5b6e54b9bd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -16.09
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8389346706141084302, guid: eb7975df17c714cc7922bc5b6e54b9bd, type: 3}
       propertyPath: m_Name
@@ -388,30 +392,42 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6911639518842191136, guid: abca5828c97e5465d94ce8f75b314521, type: 3}
       propertyPath: _onClick.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6911639518842191136, guid: abca5828c97e5465d94ce8f75b314521, type: 3}
       propertyPath: _onClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6911639518842191136, guid: abca5828c97e5465d94ce8f75b314521, type: 3}
       propertyPath: _onClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6911639518842191136, guid: abca5828c97e5465d94ce8f75b314521, type: 3}
+      propertyPath: _onClick.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6911639518842191136, guid: abca5828c97e5465d94ce8f75b314521, type: 3}
       propertyPath: _onClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 11400000, guid: ed35f729cce464480a10f8e1d6e5b8b9, type: 2}
+      objectReference: {fileID: 11400000, guid: 1e16f6afb83564cc5b009aa8788b9c39, type: 2}
     - target: {fileID: 6911639518842191136, guid: abca5828c97e5465d94ce8f75b314521, type: 3}
       propertyPath: _onClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 1196730143}
+    - target: {fileID: 6911639518842191136, guid: abca5828c97e5465d94ce8f75b314521, type: 3}
+      propertyPath: _onClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: fc94c98fbf195465b9a82bdc8f08728f, type: 2}
     - target: {fileID: 6911639518842191136, guid: abca5828c97e5465d94ce8f75b314521, type: 3}
       propertyPath: _onClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6911639518842191136, guid: abca5828c97e5465d94ce8f75b314521, type: 3}
       propertyPath: _onClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6911639518842191136, guid: abca5828c97e5465d94ce8f75b314521, type: 3}
+      propertyPath: _onClick.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6911639518842191136, guid: abca5828c97e5465d94ce8f75b314521, type: 3}
@@ -423,17 +439,25 @@ PrefabInstance:
       value: DisableClickable
       objectReference: {fileID: 0}
     - target: {fileID: 6911639518842191136, guid: abca5828c97e5465d94ce8f75b314521, type: 3}
+      propertyPath: _onClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Raise
+      objectReference: {fileID: 0}
+    - target: {fileID: 6911639518842191136, guid: abca5828c97e5465d94ce8f75b314521, type: 3}
       propertyPath: _onClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: LoadEventChannelSO, Assembly-CSharp
+      value: AudioEventChannelSO, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6911639518842191136, guid: abca5828c97e5465d94ce8f75b314521, type: 3}
       propertyPath: _onClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
       value: Clickable, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6911639518842191136, guid: abca5828c97e5465d94ce8f75b314521, type: 3}
+      propertyPath: _onClick.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: FinishEventChannelSO, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6911639518842191136, guid: abca5828c97e5465d94ce8f75b314521, type: 3}
       propertyPath: _onClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: fc322c15f5f8145c2b4ce7f0e8704b40, type: 2}
     - target: {fileID: 6911639518842191136, guid: abca5828c97e5465d94ce8f75b314521, type: 3}
       propertyPath: _onClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
       value: BeardUpGirlfriend
@@ -443,12 +467,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6911639518842191136, guid: abca5828c97e5465d94ce8f75b314521, type: 3}
+      propertyPath: _onClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1196730141}
+    - target: {fileID: 6911639518842191136, guid: abca5828c97e5465d94ce8f75b314521, type: 3}
       propertyPath: _onClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: AudioCueSO, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6911639518842191136, guid: abca5828c97e5465d94ce8f75b314521, type: 3}
       propertyPath: _onClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6911639518842191136, guid: abca5828c97e5465d94ce8f75b314521, type: 3}
+      propertyPath: _onClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6911639518842191139, guid: abca5828c97e5465d94ce8f75b314521, type: 3}
       propertyPath: m_Name
@@ -460,11 +492,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6911639518842191140, guid: abca5828c97e5465d94ce8f75b314521, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.9999999
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6911639518842191140, guid: abca5828c97e5465d94ce8f75b314521, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 6911639518842191140, guid: abca5828c97e5465d94ce8f75b314521, type: 3}
       propertyPath: m_LocalPosition.z

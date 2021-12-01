@@ -375,6 +375,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 1100
       objectReference: {fileID: 0}
+    - target: {fileID: 1242743511104722830, guid: 1f85ebd2dd39d4d5da04733724050d5a, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1242743512876209299, guid: 1f85ebd2dd39d4d5da04733724050d5a, type: 3}
       propertyPath: m_Name
       value: Canvas_ScreenWipe
